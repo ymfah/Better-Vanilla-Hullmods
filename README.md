@@ -2,7 +2,7 @@
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
 
-# [Vanilla Hullmods] - Hullmods that are currently obtainable but with restrictions removed and/or rebalanced.
+<strong>[Vanilla Hullmods] - Hullmods that are currently obtainable but with restrictions removed and/or rebalanced.</strong>
 
 - Safety Overrides
 
@@ -108,7 +108,7 @@ Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad on
 
 	Now reduces fighter replacement rate by 15% in addition to the regular bonuses.
 
-# [Restored Hullmods] - Vanilla hullmods that were not obtainable.
+<strong>[Restored Hullmods] - Vanilla hullmods that were not obtainable.</strong>
 
 - Special Modifications
 
@@ -145,7 +145,7 @@ Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad on
 	Bonus adjusted to 25% manuvability, 100 flat PD range and 25% damage against fighters and missiles.
 	These bonuses also applies to any fighters launched by this ship.
 	
-# [Built-in S-mod interactions] - Hullmods only featured in certain ships. Now can be S-modded to change the ship's role. Since it costs an S-mod, overall benefit should be similar to an officer's regular skill vs elite skill.
+<strong>[Built-in S-mod interactions] - Hullmods only featured in certain ships. Now can be S-modded to change the ship's role. Since it costs an S-mod, overall benefit should be similar to an officer's regular skill vs elite skill.</strong>
 
 - Flux Shunt
 
@@ -180,20 +180,20 @@ Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad on
 
 	Can now be S-modded to provide a -50% CR reduction instead of -100%.
 
-# [Installation]
+<strong>[Installation]</strong>
 
 	Copy the folder into /mods and enable it.
 
-# [Dependancy]
+<strong>[Dependancy]</strong>
 	
 	Currently none.
 
-# [Compatability]
+<strong>[Compatability]</strong>
 
 	Can be safely added and removed from existing games.
 	May have issues with mods that interact or change these hullmods.
 
-# [ToDo]
+<strong>[ToDo]</strong>
 
 - More S-mod interactions
 
@@ -215,6 +215,6 @@ Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad on
 	Lunalib integration to make changes to stats.
 	Experimental Hull modification integration to act as a vanila-friendly frontend.
 
-# [Credit]
+<strong>[Credit]</strong>
 
 	Alex for the excellent comments.
