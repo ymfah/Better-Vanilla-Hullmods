@@ -1,0 +1,13 @@
+{
+    "displayName": "Hanger",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "crig",
+    "hullMods": ["converted_hangar"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "crig_Hanger",
+    "weaponGroups": [],
+    "wings": ["gladius_wing"]
+}

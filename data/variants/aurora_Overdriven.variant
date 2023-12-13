@@ -1,0 +1,59 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "hullId": "aurora",
+    "hullMods": [
+        "safetyoverrides",
+        "hardened_subsystems",
+        "missleracks"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "aurora_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "phasecl"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "sabotpod"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 010": "sabot",
+                "WS 011": "sabot",
+                "WS 012": "sabot",
+                "WS 013": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "ionpulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "heavyblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "irpulse",
+                "WS 005": "irpulse"
+            }
+        }
+    ]
+}

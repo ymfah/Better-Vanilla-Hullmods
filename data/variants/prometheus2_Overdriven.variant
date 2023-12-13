@@ -1,0 +1,49 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 12,
+    "goalVariant": true,
+    "hullId": "prometheus2",
+    "hullMods": [
+        "converted_fighterbay",
+        "safetyoverrides",
+        "shield_shunt",
+        "assault_package"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "prometheus2_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 031": "multineedler",
+                "WS 032": "multineedler"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "hammerrack"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "chaingun",
+                "WS 005": "chaingun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightmg",
+                "WS 003": "lightmg",
+                "WS 013": "lightmg",
+                "WS 014": "lightmg"
+            }
+        }
+    ]
+}

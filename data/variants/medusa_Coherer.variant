@@ -1,0 +1,43 @@
+{
+    "displayName": "Coherer",
+    "fluxCapacitors": 5,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "medusa",
+    "hullMods": [
+        "coherer",
+        "targetingunit",
+        "hardenedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "medusa_Coherer",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "amblaster",
+                "WS 003": "amblaster"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "sabot",
+                "WS 009": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "ionpulser"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 007": "pulselaser"}
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "displayName": "Coherer",
+    "fluxCapacitors": 0,
+    "fluxVents": 16,
+    "goalVariant": true,
+    "hullId": "sunder_LG",
+    "hullMods": [
+        "coherer",
+        "targetingunit",
+        "magazines"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "sunder_LG_Coherer",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 003": "autopulse"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "harpoon",
+                "WS 005": "harpoon"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "ionpulser",
+                "WS 004": "ionpulser"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 006": "irpulse",
+                "WS 007": "irpulse"
+            }
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 	"id":"BVH",
 	"name":"Better Vanilla Hullmods",
 	"author":"ymfah",
-	"version":"0.3.0",
+	"version":"0.4.0",
 	"description":"Remove vanilla hullmod restrictions, add hidden hullmods, and imporve bad ones.",
 	"gameVersion":"0.96a-RC10",
 }

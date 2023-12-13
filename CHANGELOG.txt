@@ -1,6 +1,24 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.3 - Last changed in 2023.12.12
+[0.96a-RC10] Better Vanilla Hullmods v0.4 - Last changed in 2023.12.14
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
+
+[Changes - v0.4]
+
+Fixed potential crash with Heavy Balistics Integration when used with other mods.
+
+Added 49 variants to existing hulls from various factions so that the AI can utilize the modified hullmods better. 
+
+These range from simple changes like carriers using Nav Relay, to more radical and ill-advised ones like converted hanger phase ships to SO capitals.
+
+These variants have around a ~30% chance to spawn over the original variants.
+
+Energy Bolt Coherer is now known to the Sindrian Diktat and Tri-Tachyon.
+
+Escort Package and Assult Package is now known to every faction.
+
+Nerfed Escort Package and Assult Package. OP increased to (5/10/15/25).
+
+Indirectly nerfed EP/AP by making Civilian grade hull no longer drop.
 
 [Vanilla Hullmods] - Hullmods that are currently obtainable but with restrictions removed and/or rebalanced.
 

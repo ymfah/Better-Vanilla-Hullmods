@@ -1,0 +1,34 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 0,
+    "fluxVents": 4,
+    "goalVariant": true,
+    "hullId": "monitor",
+    "hullMods": [
+        "frontemitter",
+        "unstable_injector",
+		"fluxshunt"
+    ],
+    "permaMods": [],
+    "sMods": [
+	],
+    "variantId": "monitor_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "amblaster",
+                "WS 004": "amblaster"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "flak",
+                "WS 002": "flak"
+            }
+        }
+    ]
+}

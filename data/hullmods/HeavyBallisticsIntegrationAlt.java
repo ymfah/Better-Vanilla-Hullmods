@@ -7,10 +7,10 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class HeavyBallisticsIntegrationAlt extends BaseHullMod {
 
-	public static final float COST_REDUCTION  = 10;
-	public static final float SMOD_COST_REDUCTION_SMALL  = 1;
-	public static final float SMOD_COST_REDUCTION_MEDIUM  = 5;
-		public static final float SMOD_COST_REDUCTION_LARGE  = 5;
+	public static final float COST_REDUCTION  = 10f;
+	public static final float SMOD_COST_REDUCTION_SMALL  = 1f;
+	public static final float SMOD_COST_REDUCTION_MEDIUM  = 5f;
+	public static final float SMOD_COST_REDUCTION_LARGE  = 5f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		boolean sMod = isSMod(stats);

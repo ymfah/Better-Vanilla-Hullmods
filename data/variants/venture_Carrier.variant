@@ -1,0 +1,48 @@
+{
+    "displayName": "Carrier",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "goalVariant": true,
+    "hullId": "venture",
+    "hullMods": [
+        "converted_hangar",
+        "escort_package",
+        "defensive_targeting_array",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_Carrier",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "salamanderpod",
+                "WS 006": "salamanderpod"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heatseeker",
+                "WS 007": "heatseeker"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "heavyburst"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymg",
+                "WS 003": "heavymg"
+            }
+        }
+    ],
+    "wings": ["longbow_wing"]
+}

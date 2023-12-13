@@ -1,0 +1,76 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "hullId": "onslaught_xiv",
+    "hullMods": [
+        "safetyoverrides",
+        "heavyarmor",
+        "armoredweapons",
+        "autorepair",
+        "missleracks",
+        "shield_shunt",
+    ],
+    "permaMods": [],
+    "sMods": [
+	],
+    "variantId": "onslaught_xiv_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 016": "tpc",
+                "WS 017": "tpc"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 021": "phasecl",
+                "WS 022": "phasecl",
+                "WS 023": "phasecl",
+                "WS 024": "phasecl"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 019": "multineedler"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "chaingun",
+                "WS 003": "chaingun",
+                "WS 012": "chaingun",
+                "WS 013": "chaingun"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "devastator",
+                "WS 020": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmg",
+                "WS 006": "lightmg",
+                "WS 007": "heavymg",
+                "WS 008": "lightmg",
+                "WS 009": "lightmg",
+                "WS 010": "heavymg",
+                "WS 011": "heavymg",
+                "WS 014": "heavymg",
+                "WS 015": "heavymg"
+            }
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "displayName": "Converted",
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "harbinger",
+    "hullMods": [
+        "fluxbreakers",
+        "converted_hangar",
+        "unstable_injector",
+    ],
+    "permaMods": [],
+    "sMods": [
+	],
+    "variantId": "harbinger_Converted",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "ionpulser",
+                "WS 003": "ionpulser"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "sabot",
+                "WS 005": "sabot"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "heavyblaster"}
+        }
+    ],
+    "wings": ["xyphos_wing"]
+}

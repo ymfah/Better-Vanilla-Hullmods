@@ -1,0 +1,31 @@
+{
+    "displayName": "Hanger",
+    "fluxCapacitors": 3,
+    "fluxVents": 0,
+    "hullId": "gremlin_d_pirates",
+    "hullMods": ["converted_hangar"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "gremlin_d_pirates_Hanger",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 000": "lightag"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "hammer",
+                "WS 003": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "mininglaser"}
+        }
+    ],
+    "wings": ["sarissa_wing"]
+}

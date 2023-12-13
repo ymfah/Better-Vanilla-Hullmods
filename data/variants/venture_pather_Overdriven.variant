@@ -1,0 +1,46 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "venture_pather",
+    "hullMods": [
+        "safetyoverrides",
+        "shield_shunt",
+        "armoredweapons"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "venture_pather_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "chaingun",
+                "WS 006": "chaingun"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "hammer",
+                "WS 007": "hammer"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "miningblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "heavymg",
+                "WS 003": "heavymg"
+            }
+        }
+    ]
+}
