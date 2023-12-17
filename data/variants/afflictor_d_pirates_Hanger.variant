@@ -1,0 +1,27 @@
+{
+    "displayName": "Hanger",
+    "fluxCapacitors": 5,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "afflictor_d_pirates",
+    "hullMods": ["converted_hangar"],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "afflictor_d_pirates_Hanger",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 006": "amblaster"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "lightmortar",
+                "WS 003": "lightmortar"
+            }
+        }
+    ],
+    "wings": ["sarissa_wing"]
+}

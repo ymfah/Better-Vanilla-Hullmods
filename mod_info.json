@@ -1,8 +1,28 @@
 {
-	"id":"BVH",
-	"name":"Better Vanilla Hullmods",
+    "id":"BVH", # For the convenience of troubleshooters, include your name and the mod name, not just an acronym.
+	"name":"Better Vanilla Hullmods", # Displayed to the player
 	"author":"ymfah",
-	"version":"0.4.0",
+    "utility":"false",
+	"version":"0.5.0",
 	"description":"Remove vanilla hullmod restrictions, add hidden hullmods, and imporve bad ones.",
-	"gameVersion":"0.96a-RC10",
+    "gameVersion": "0.96a-RC10", 
+  	"jars":["jars/BVH.jar"],
+  	"modPlugin":"BVH.BetterVanillaHullmods",
+	  	"dependencies": [
+        #{
+        #    "id": "lw_lazylib",
+        #    "name": "LazyLib",
+        #    #"version": "2.7b"
+        #},
+        #{
+        #    "id": "MagicLib",
+        #    "name": "MagicLib",
+        #    #"version": "0.34"
+        #},
+        #{
+        #    "id": "shaderLib",
+        #    "name": "GraphicsLib",
+        #    #"version": "1.5.1"
+        #}
+    ],
 }

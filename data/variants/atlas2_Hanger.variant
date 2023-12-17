@@ -1,0 +1,64 @@
+{
+    "displayName": "Hanger",
+    "fluxCapacitors": 0,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "atlas2",
+    "hullMods": [
+        "dedicated_targeting_core",
+        "converted_hangar",
+        "escort_package"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "atlas2_Hanger",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 012": "squall"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 013": "squall"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "devastator",
+                "WS 009": "devastator"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 014": "heavymg",
+                "WS 015": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 017": "heavymg",
+                "WS 018": "heavymg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightmg",
+                "WS 002": "lightmg",
+                "WS 010": "lightmg",
+                "WS 011": "lightmg",
+                "WS 020": "lightmg",
+                "WS 021": "lightmg"
+            }
+        }
+    ],
+    "wings": ["talon_wing"]
+}

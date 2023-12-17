@@ -1,0 +1,33 @@
+{
+    "displayName": "Rugged",
+    "fluxCapacitors": 0,
+    "fluxVents": 2,
+    "goalVariant": true,
+    "hullId": "cerberus",
+    "hullMods": [
+        "integrationsuite",
+        "heavyarmor",
+        "armoredweapons",
+        "reinforcedhull",
+        "unstable_injector"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "cerberus_Rugged",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 004": "shredder"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "lightac",
+                "WS 002": "lightac",
+                "WS 003": "railgun"
+            }
+        }
+    ]
+}

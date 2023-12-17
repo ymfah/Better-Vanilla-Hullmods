@@ -1,0 +1,55 @@
+{
+    "displayName": "DTA",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "goalVariant": true,
+    "hullId": "mora",
+    "hullMods": [
+        "defensive_targeting_array",
+        "dedicated_targeting_core",
+        "armoredweapons",
+        "integrationsuite",
+        "frontemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "mora_DTA",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightmortar"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "annihilatorpod",
+                "WS 004": "annihilatorpod"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "lightmortar",
+                "WS 012": "lightmortar",
+                "WS 013": "lightmortar"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "lightmortar",
+                "WS 008": "lightmortar",
+                "WS 011": "lightmortar"
+            }
+        }
+    ],
+    "wings": [
+        "sarissa_wing",
+        "sarissa_wing",
+        "sarissa_wing"
+    ]
+}

@@ -1,0 +1,129 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+Safety Overrides,safetyoverrides,0,,,"special, engines, offensive, merc, standard","Special, Engines",2500,TRUE,,,15,30,45,70,data.hullmods.SafetyOverrides,"Disabling safety protocols increases the ship's top speed in combat by %s/%s/%s/%s (depending on ship size, with a corresponding increase in acceleration) and allows the zero-flux engine boost to take effect regardless of flux level. The flux dissipation rate, including that of additional vents, is increased by a factor of %s.
+
+Reduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.","Drastic improvement in performance, much lower peak time.","This hull's systems have been drastically modified from spec, likely without certified engineering oversight. Its systems appear to work correctly under routine conditions, but have a significant chance of critical malfunction when stressed.",graphics/hullmods/safety_overrides.png
+Converted Fighter Bay,converted_fighterbay,0,,,"req_spaceport, special, non_phase, standard","Fighters, Logistics, Requires Dock",3000,,,,3,6,9,15,data.hullmods.ConvertedFighterBay,"Converts the ship's fighter bays into improvised cargo holds, giving it an additional %s cargo capacity and reducing its crew requirements by %s per fighter bay. The crew reduction is limited to a maximum of %s.
+
+Decreases the ship's deployment points and supply cost to recover from deployment by %s/%s/%s/%s per fighter bay.",Converts fighter bays into improvised cargo holds.,"Monthly maintenance cost reduced by %s per fighter bay.
+
+Increases hull integrity by %s per fighter bay.",graphics/hullmods/converted_fighter_bay.png
+Dedicated Targeting Core,dedicated_targeting_core,0,,,"offensive, merc, standard",Weapons,2500,TRUE,,,0,0,9,15,data.hullmods.DedicatedTargetingCore,"Increases the range of ballistic and energy weapons by %s/%s for cruisers/capital ships.
+
+Can not be installed on a frigate or a destroyer, and can not work in conjunction with Integrated Targeting Unit.
+
+Most combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.","Increases weapon range, more so for larger ships.",Increases the range bonus to %s for cruisers and %s for capital ships.,graphics/hullmods/targeting_core.png
+Shield Shunt,shield_shunt,1,,,"special, engines, offensive, shields, merc, standard","Special, Shields, Engines",3000,,,,3,5,7,10,data.hullmods.ShieldShuntAlt,"Removes the ship's shields. The external emitter nodes are replaced with reinforced plating, increasing the ship's armor by %s. 
+
+The idle power requirement is redirected to the ship's engine, increasing the ship's top speed in combat by %s.","Removes shields, increases armor and improves top speed.","Increases the ship's armor by an additional %s.
+
+Increases the ship's top speed in combat by an additional %s.",graphics/hullmods/shield_shunt.png
+Special Modifications,andrada_mods,3,,,dmod,Special,10000,,,,2,4,6,10,com.fs.starfarer.api.impl.hullmods.AndradaMods,"During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. 
+
+The new chief designer, a loyal officer appointed by the Supreme Executor himself, instructed the forge-programmers to make accommodations for the installation of special blast-proof insulated paneling produced by Sindria itself.
+
+If the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.
+
+Crew casualties in combat are increased by %s. The base flux dissipation rate is reduced by %s, and the repair rate for disabled weapons and engines is reduced by %s.",Reduces the ship's performance.,,graphics/hullmods/special_modifications.png
+Energy Bolt Coherer,coherer,3,,,"offensive, merc",Weapons,10000,,,,5,10,15,25,data.hullmods.EnergyBoltCohererAlt,<tooltip created in the script>,Increases base range of non-beam energy weapons.,,graphics/hullmods/coherer.png
+High Scatter Amplifier,high_scatter_amp,3,,,"offensive, merc, standard",Weapons,5000,,,,4,8,12,20,data.hullmods.HighScatterAmpAlt,<tooltip created in the script due to sections>,Reduces beam range; beams deal more damage and apply hard flux to shields.,Increases beam weapon damage by an additional %s.,graphics/hullmods/high_scatter_amp.png
+Integrated Point Defense AI,pointdefenseai,3,,,"defensive, merc, standard","Weapons, Defenses",10000,,,,3,6,9,15,data.hullmods.IntegratedPointDefenseAI,"Gives all point-defense weapons the ability to identify - and ignore - decoy flares. In addition, all point-defense weapons get the best possible target leading, regardless of combat readiness, and all damage to missiles is increased by %s. 
+
+Additionally, all small non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",Small non-missile weapons act as point-defense; PD not affected by decoy flares.,"All small, medium and large non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",graphics/hullmods/integrated_point_defense_ai.png
+Unstable Injector,unstable_injector,0,,,"engines, merc, standard",Engines,2500,TRUE,,,5,10,15,25,data.hullmods.UnstableInjector,"Increases the ship's top speed in combat by %s/%s/%s/%s su/second, depending on hull size.
+
+Interferes with systems, reducing combat readiness by %s.","Increases speed, reduces combat readiness.","Increases the ship's top speed bonus by a factor of %s.
+
+Ship can no longer decelerate.",graphics/hullmods/unstable_injector.png
+Converted Hangar,converted_hangar,1,,,"special, merc, standard",Fighters,5000,,,,10,10,12,20,data.hullmods.ConvertedHangarAlt,<Tooltip created in script>,Improvised fighter bay for non-carriers.,"Increases the rate at which the fighter replacement rate recovers by %s for cruisers, and by %s for capital ships. No added effect for frigates and destroyers.",graphics/hullmods/converted_hangar.png
+Augmented Drive Field,augmentedengines,1,,,"req_spaceport, merc, standard","Logistics, Requires Dock",8000,,,,4,8,12,20,data.hullmods.AugmentedEngines,Increases maximum burn level by %s.,Increases maximum burn level.,Increases maximum burn level by a further %s.,graphics/hullmods/augmented_drive_field2.png
+Makeshift Shield Generator,frontshield,0,,,"shields, defensive, standard",Shields,4000,,,,5,10,15,25,data.hullmods.FrontShieldGenerator,"Installs an inefficient shield generator that does not require external emitter nodes. The shield emitter is locked in a forward-facing position and has a %s degree arc.
+
+The shield generator draws much of its power from engines and reduces the ship's top speed by %s.
+
+If the ship already possesses a shield, the top speed penalty is negated. Instead, the external emitter nodes are replaced with reinforced plating, increasing the ship's armor by %s. Ships with omni shields will retain their ability use omni-directional shielding, at an arc penalty.",Installs basic shields on shieldless ship. Replaces existing shields if present. Reduces top speed.,,graphics/hullmods/front_shield_generator.png
+B-Deck,bdeck,1,,,"special, merc, standard",Fighters,4000,,,,5,10,15,25,data.hullmods.BDeckAlt,"Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a ""B-Deck"".
+
+Standby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",Launches fresh wing once per combat and replenishes the replacement rate.,,graphics/hullmods/bdeck.png
+Neural Interface,neural_interface,3,,,"special, no_drop, no_drop_salvage",Special,10000,,,,3,6,9,15,com.fs.starfarer.api.impl.hullmods.NeuralInterface,"Links the flagship with another ship, allowing switching between ships without using a shuttle pod. Both ships must have a Neural Interface and not be commanded by an officer or an AI core. The transfer is instant if the combined deployment points of the ships are %s or less.
+
+If the linked ship is destroyed or leaves the battlefield, the flagship will establish a neural link with another ship with a Neural Interface. If the flagship is destroyed or leaves the battlefield, command will have to be physically transferred to another ship with a Neural Interface before a new link can be established.
+
+Both linked ships benefit from your personal combat skills as if you'd transferred command to them, regardless of which one you're controlling personally. As with ""transfer command"", some skill effects - such as those increasing ammo capacity, or other fixed ship stats - do not apply.","Allows rapid switching between ships, resets system cooldown and adds a charge.",,graphics/hullmods/neural_interface.png
+Neural Integrator,neural_integrator,,,,"special, no_drop, no_drop_salvage",Special,10000,,,,4,8,12,20,com.fs.starfarer.api.impl.hullmods.NeuralIntegrator,"An augmented version of Neural Interface that works with automated ships by enabling direct control of all of the ship's systems via the link, instead of having the controlling conscousness aspect simply direct the bridge crew.
+
+Links the flagship with another ship, allowing switching between ships without using a shuttle pod. Both ships must have a Neural Interface and not be commanded by an officer or an AI core. The transfer is instant if the combined deployment points of the ships are %s or less.
+
+If the linked ship is destroyed or leaves the battlefield, the flagship will establish a neural link with another ship with a Neural Interface. If the flagship is destroyed or leaves the battlefield, command will have to be physically transferred to another ship with a Neural Interface before a new link can be established.
+
+Both linked ships benefit from your personal combat skills as if you'd transferred command to them, regardless of which one you're controlling personally. As with ""transfer command"", some skill effects - such as those increasing ammo capacity, or other fixed ship stats - do not apply.",Specialized Neural Interface for automated ships.,,graphics/hullmods/neural_integrator.png
+Assault Package,assault_package,1,,,"req_spaceport, weapons, engines, civ_package, standard","Special, Engines, Weapons, Logistics, Requires Dock",8000,,,,5,10,15,25,data.hullmods.AssaultPackageAlt,"Weapon fire controls are disabled, increasing rate of fire of all ballistic, energy, and missile weapons by %s. However, the recoil is increased by %s.
+
+All unnecessary thrusters are redirected, increasing top speed and zero flux boost speed by %s. The ship can no longer decelerate.","Increases hull integrity, armor, and flux capacity.",,graphics/hullmods/assault_package.png
+Escort Package,escort_package,1,,,"req_spaceport, defensive, engines, civ_package, standard","Special, Defenses, Engines, Logistics, Requires Dock",8000,,,,5,10,15,25,data.hullmods.EscortPackageAlt,"Increases the ship's maneuverability by %s. Increases the range of all point-defense weapons by %s, and increases the damage dealt to fighters and missiles by %s.
+
+These effects are also applied to fighters launched by this ship.","Increases maneuverability, point-defense range, and damage dealt to fighters and missiles.",,graphics/hullmods/escort_package.png
+Civilian-grade Hull,civgrade,,,,"no_drop, no_drop_salvage","Special, Requires Dock",6000,,,,2,4,6,10,data.hullmods.CivGrade,Increases sensor profile by %s. Reduces sensor strength by %s.,"Increases sensor profile, reduces sensor strength.",Negates the sensor profile and sensor strength penalty.,graphics/hullmods/civilian_grade.png
+Heavy Ballistics Integration,hbi,,,,"no_drop, no_drop_salvage",Weapons,8000,,,,5,10,15,25,data.hullmods.HeavyBallisticsIntegrationAlt,Reduces the ordnance point cost of large ballistic weapons by %s.,Reduces ordnance point cost of large ballistic weapons.,"Reduces the ordnance point cost of all ballistic weapons by %s/%s/%s instead, depending on weapon size.
+
+The hull needs to be stripped for the bonus to be applied.",graphics/hullmods/ballistics_integration.png
+Flux Shunt,fluxshunt,,,,"no_drop, no_drop_salvage",Special,10000,,,,15,30,45,70,data.hullmods.FluxShunt,Allows the ship to dissipate hard flux at %s of the normal rate while shields are on.,Allows dissipation of hard flux while shields are up.,"Bonus decreased to %s of the normal rate while shields are on instead.
+
+The shunt is diverted to the weapon mounts. Weapons no longer generate flux.",graphics/hullmods/flux_shunt.png
+Fourteenth Battlegroup,fourteenth,,,,"no_drop, no_drop_salvage",Special,10000,,,,5,10,15,25,data.hullmods.Fourteenth,"This ship is a survivor of the original 14th Domain Battlegroup which founded the Hegemony. It is a prime specimen of the Domain Navy's ""decisive battle"" doctrine, particularly exhibited by a series of radical structural modifications (performed with pre-Collapse industrial methods) which allow the mounting of heavier armor plating by a flat increase of %s standard units, with only a %s reduction in speed and maneuverability. Exceptionally well-tuned energy systems increase flux throughput and capacity by %s over standard examples of this hull.",,"The heavier armor plating is completely removed. Negates the armor bonus and reduces it by %s. 
+
+Increases speed and maneuverability by %s instead of decreasing it. Flux throughput and capacity remains the same.",graphics/hullmods/fourteenth.png
+Shield Conversion - Front,frontemitter,2,,,"shields, defensive, merc, standard",Shields,7000,,,,3,5,8,12,data.hullmods.FrontShieldEmitter,"Locks the ship's omni-directional shield emitter to a front-facing position and extends its arc by %s. As with all frontal emitters, the shield will also deploy twice as quickly.","Converts omni shield to front, extends arc.",Extends the shield's arc by %s instead.,graphics/hullmods/front_shield_emitter.png
+Defensive Targeting Array,defensive_targeting_array,2,,,"special, merc, standard",Fighters,3000,,,,2,4,6,10,data.hullmods.DefensiveTargetingArrayAlt,"Standard fighter communication links are re-purposed to provide short-range targeting data.
+
+Increases fighter damage to missiles and other fighters by %s, and damage against ships by %s.
+
+Makes the fighters unable to leave the vicinity of their ship.","Increases fighter damage, reduces fighter roam range to zero.","Extends range of ballistic, energy, and missile weapons of the ship's fighters by %s units.",graphics/hullmods/defensive_targeting_array.png
+Armored Weapon Mounts,armoredweapons,0,,,"defensive, merc, standard","Weapons, Defenses",2500,TRUE,,,3,6,9,15,data.hullmods.ArmoredWeapons,"Increases the durability of all weapons by %s and reduces recoil by %s, but decreases weapon turn rate by %s. Also increases the ship's armor by %s.","Makes weapons harder to disable, reduces recoil.","Increases the rate of fire of all non-missile weapons by %s.
+
+Decreases flux generated by all non-missile weapons by %s.",graphics/hullmods/armored_weapon_emplacements.png
+ECM Package,ecm,2,,,"offensive, special, merc, standard","Weapons, Support, Special",4000,,,,5,8,15,20,data.hullmods.ECMPackageAlt,"When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on this ship's hull size.
+
+Increases system range by %s.",Increases ship's ECM rating. Improves system.,"Increases system regeneration rate by %s.
+
+Decreases system cooldown by %s.",graphics/hullmods/ecm_package.png
+Nav Relay,nav_relay,2,,,"engines, special, merc, standard","Engines, Support, Fighters",5000,,,,5,8,15,20,data.hullmods.NavRelayAlt,"When deployed in combat, increases nav rating of your fleet by %s/%s/%s/%s, depending on this ship's hull size.
+
+The total nav rating of your fleet increases the top speed of your deployed ships.
+
+Increases fighter's top speed launched from this ship by %s.",Increases top speed of deployed ships and fighters from this ship.,Increases fighter engagement range by %s.,graphics/hullmods/nav_relay.png
+Rugged Construction,rugged,2,,,"no_drop, no_drop_salvage","Special, Defenses, Requires Dock",3000,,,,3,6,9,15,data.hullmods.RuggedConstructionAlt,"Reduces most negative effects of d-mods by %s. If disabled or destroyed in combat, the ship has a %s chance to avoid new d-mods, and is almost always recoverable after the battle.
+
+In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.",Reduces impact of d-mods; ship almost always recoverable if lost.,"Negative effects of d-mods are only reduced by %s.
+
+Each d-mod increases the armor by %s, and hull integrity by %s.",graphics/hullmods/rugged_construction.png
+Advanced Targeting Core,advancedcore,,,,"no_drop, no_drop_salvage",Weapons,,,,,5,10,15,25,data.hullmods.AdvancedTargetingCore,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
+
+Precludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",Greatly extends non-missile weapon range.,"Certain protocols are disabled, similar to safety overrides. This allows the zero-flux engine boost to take effect regardless of flux level.
+
+However, this reduces the range bonus of ballistic and energy weapons to %s. The range of point-defense weapons is unaffected.",graphics/hullmods/advanced_targeting_core.png
+Expanded Deck Crew,expanded_deck_crew,1,,,"special, merc, standard",Fighters,4000,,,,5,10,15,25,data.hullmods.ExpandedDeckCrewAlt,"Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s. Time to launch replacement fighters is decreased by %s.
+
+Increases the crew required by %s per fighter bay.","Improves fighter replacement rate, increases crew requirements.",,graphics/hullmods/expanded_deck_crew.png
+Recovery Shuttles,recovery_shuttles,1,,,"special, standard",Fighters,4000,,,,3,6,9,15,data.hullmods.RecoveryShuttlesAlt,Reduces the casualties suffered by fighter pilots by %s. Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s.,Reduces fighter pilot casualties.,Increases the fighter pilot casualty reduction to %s.,graphics/hullmods/recovery_shuttles.png
+Distributed Fire Control,distributed_fire_control,,,,,,,,TRUE,,0,0,0,0,data.hullmods.DistributedFireControlAlt,"Much of the damage that takes weapons offline is to external control runs and power conduits. This ship's weapons are engineered to operate more independently, reducing their exposure to damage by %s and reducing the EMP damage taken by the ship overall by %s.
+
+These effects are disabled if an Integrated Targeting Unit or a Dedicated Targeting Core in installed.",Increases weapon durability and reduces EMP damage taken.,,graphics/hullmods/distributed_fire_control2.png
+Integration Suite,integrationsuite,0,,,"no_drop, no_drop_salvage, standard","Special, Logistics, Requires Dock",2500,,TRUE,,5,10,15,25,data.hullmods.IntegrationSuite,"Extremely talented captains are said to be able to utilize the full potential of hull modifications, even building them in at no cost.
+
+This hull modification mimics that effect. Activates the positive S-mod effect of other hullmods.
+
+Does not affect logistics hullmods.",Activates S-mod effects of other hullmods.,,graphics/hullmods/damper_field.png
+Shielded Cargo Holds,shielded_holds,0,,,"req_spaceport, merc, standard","Logistics, Requires Dock",4000,,,,5,10,15,25,data.hullmods.ShieldedCargoHolds,"Commonly found on ships that can't always rely on shields to protect their cargo from cosmic radiation. Only a few tweaks are needed to have the shielding confound long-range cargo scans, reducing the probability of contraband being detected.",Improves chance to avoid detection of contraband.,,graphics/hullmods/shielded_cargo_hold.png
+Phase Anchor,phase_anchor,3,,,"phase, merc, no_build_in, standard, phase_brawler",Phase,7000,,,,10,20,30,50,data.hullmods.PhaseAnchorAlt,"Reduces the phase cloak's activation cost to %s. Increases the soft flux dissipation and weapon recharge rate by %s while phased.
+
+When suffering critical damage that would otherwise destroy or disable the ship, able to initiate an emergency dive deep into p-space. The ship counts as retreated and will emerge into normal space when combat is over, suffering an additional penalty to combat readiness equal to %s its deployment cost. The ship must have enough combat readiness to cover this cost to initiate the dive.
+
+Due to the immense distortions in p-space caused by such a maneuver, only one ship per battle - regardless of which side it's on - is able to perform it.","Increases flux dissipation and weapon recharge while phased, emergency dive maneuver.",,graphics/hullmods/phase_anchor.png
+Adaptive Phase Coils,adaptive_coils,2,,,"phase, merc, standard",Phase,5000,,,,5,10,15,25,data.hullmods.AdaptivePhaseCoilsAlt,"Phase coils are less able to maintain a connection with normal space as the ship's hard flux levels rise, resulting in a greatly reduced top speed as the coils struggle to gain traction.
+
+This modification allows the coils to handle higher levels of hard flux, increasing the threshold at which speed bottoms out by %s. For standard-design coils with no other modifications, this takes the threshold from %s to %s.",Reduces impact of hard flux level on top speed while phased.,,graphics/hullmods/phase_field.png
+Reinforced Bulkheads,reinforcedhull,0,,,"defensive, merc, standard",Defenses,2500,TRUE,,,5,10,15,25,data.hullmods.ReinforcedBulkheads,"Increases the ship's hull integrity by %s. If disabled, the ship will not break apart and is almost always recoverable after the battle.",Increases hull integrity; ship almost always recoverable if lost.,Further increase the ship's hull integrity by %s per D-mod.,graphics/hullmods/reinforced_bulkheads.png
+Blast Doors,blast_doors,0,,,"defensive, merc, standard",Defenses,2500,TRUE,,,3,5,8,12,data.hullmods.BlastDoors,"Installs additional hermetic and heavily reinforced doors at critical junctures throughout the ship. Increases hull integrity by %s.
+
+Ship takes %s fewer crew casualties from hull damage sustained in combat.","Increases hull integrity, reduces crew casualties.",Increases the crew casualty reduction to %s.,graphics/hullmods/blast_doors.png
+Experimental Phase Coils,ex_phase_coils,2,,,"phase, merc, standard",Phase,5000,,,,5,10,15,25,data.hullmods.ExperimentalPhaseCoilsAlt,Reduces phase cloak cooldown by %s.,Greatly reduces phase cloak cooldown.,,graphics/hullmods/phase_coils_experimental.png

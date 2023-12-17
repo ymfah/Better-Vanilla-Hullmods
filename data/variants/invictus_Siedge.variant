@@ -1,0 +1,63 @@
+{
+    "displayName": "Siedge",
+    "fluxCapacitors": 0,
+    "fluxVents": 46,
+    "goalVariant": true,
+    "hullId": "invictus",
+    "hullMods": [
+        "integrationsuite",
+        "dedicated_targeting_core",
+        "fluxdistributor",
+        "armoredweapons",
+        "auxiliarythrusters"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "invictus_Siedge",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "pilum_large",
+                "WS 007": "pilum_large"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 026": "flak"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "mark9"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 010": "hellbore"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "hellbore"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "mark9"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "flak",
+                "WS 003": "flak",
+                "WS 005": "flak",
+                "WS 006": "flak",
+                "WS 008": "flak"
+            }
+        }
+    ]
+}

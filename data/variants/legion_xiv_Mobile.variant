@@ -1,0 +1,60 @@
+{
+    "displayName": "Mobile",
+    "fluxCapacitors": 0,
+    "fluxVents": 5,
+    "goalVariant": true,
+    "hullId": "legion_xiv",
+    "hullMods": [
+        "integrationsuite",
+        "unstable_injector",
+        "extendedshieldemitter",
+        "defensive_targeting_array",
+        "armoredweapons",
+        "insulatedengine",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "legion_xiv_Mobile",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "arbalest",
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
+                "WS 005": "arbalest",
+                "WS 007": "arbalest",
+                "WS 018": "lightmg",
+                "WS 019": "lightmg",
+                "WS 020": "lightmg",
+                "WS 021": "lightmg"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "cyclone",
+                "WS 001": "cyclone"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 008": "lightmg",
+                "WS 009": "lightmg",
+                "WS 014": "lightmg",
+                "WS 015": "lightmg"
+            }
+        }
+    ],
+    "wings": [
+        "perdition_wing",
+        "perdition_wing",
+        "sarissa_wing",
+        "sarissa_wing"
+    ]
+}

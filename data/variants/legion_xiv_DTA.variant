@@ -1,0 +1,52 @@
+{
+    "displayName": "DTA",
+    "fluxCapacitors": 0,
+    "fluxVents": 43,
+    "goalVariant": true,
+    "hullId": "legion_xiv",
+    "hullMods": [
+        "missleracks",
+        "defensive_targeting_array",
+        "dedicated_targeting_core"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "legion_xiv_DTA",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 018": "lightdualac",
+                "WS 019": "lightdualac",
+                "WS 020": "lightdualac",
+                "WS 021": "lightdualac"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "cyclone",
+                "WS 001": "cyclone"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 002": "arbalest",
+                "WS 003": "arbalest",
+                "WS 004": "arbalest",
+                "WS 005": "arbalest",
+                "WS 007": "arbalest"
+            }
+        }
+    ],
+    "wings": [
+        "trident_wing",
+        "trident_wing",
+        "trident_wing",
+        "trident_wing"
+    ]
+}

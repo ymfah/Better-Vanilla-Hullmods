@@ -1,0 +1,39 @@
+{
+    "displayName": "Coherer",
+    "fluxCapacitors": 0,
+    "fluxVents": 8,
+    "hullId": "scarab",
+    "hullMods": [
+        "coherer",
+        "stabilizedshieldemitter",
+        "frontemitter",
+        "hardenedshieldemitter",
+        "hardened_subsystems"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "scarab_Coherer",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 002": "atropos",
+                "WS 003": "atropos"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "amblaster"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 005": "ioncannon",
+                "WS 010": "irpulse"
+            }
+        }
+    ]
+}

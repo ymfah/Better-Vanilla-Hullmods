@@ -1,0 +1,28 @@
+{
+    "displayName": "Rugged",
+    "fluxCapacitors": 0,
+    "fluxVents": 6,
+    "hullId": "hound_d_pirates",
+    "hullMods": [
+        "integrationsuite",
+        "armoredweapons",
+        "insulatedengine",
+        "fluxcoil",
+        "fluxdistributor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "hound_d_pirates_Rugged",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightmg"}
+        }
+    ]
+}

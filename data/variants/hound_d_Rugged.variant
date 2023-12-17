@@ -1,0 +1,26 @@
+{
+    "displayName": "Rugged",
+    "fluxCapacitors": 4,
+    "fluxVents": 10,
+    "hullId": "hound_d",
+    "hullMods": [
+        "integrationsuite",
+        "armoredweapons",
+        "insulatedengine"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "hound_d_Rugged",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 001": "chaingun"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "lightmg"}
+        }
+    ]
+}

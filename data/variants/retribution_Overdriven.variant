@@ -1,0 +1,65 @@
+{
+    "displayName": "Overdriven",
+    "fluxCapacitors": 0,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "retribution",
+    "hullMods": [
+        "safetyoverrides",
+        "frontshield",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "retribution_Overdriven",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "devastator",
+                "WS 001": "devastator"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "sabot",
+                "WS 008": "sabot",
+                "WS 009": "sabot",
+                "WS 010": "sabot",
+                "WS 020": "sabot",
+                "WS 021": "sabot"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 003": "heavymg",
+                "WS 004": "heavymg",
+                "WS 005": "heavymg",
+                "WS 006": "heavymg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 002": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "lightmg",
+                "WS 012": "lightmg",
+                "WS 013": "lightmg",
+                "WS 014": "lightmg",
+                "WS 015": "lightmg",
+                "WS 016": "lightmg",
+                "WS 017": "lightmg"
+            }
+        }
+    ]
+}

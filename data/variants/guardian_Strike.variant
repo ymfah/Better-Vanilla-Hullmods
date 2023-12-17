@@ -1,0 +1,84 @@
+{
+    "displayName": "Strike",
+    "fluxCapacitors": 0,
+    "fluxVents": 12,
+    "hullId": "guardian",
+    "hullMods": [
+        "integrationsuite",
+        "turretgyros",
+        "armoredweapons",
+        "autorepair",
+        "insulatedengine",
+        "stabilizedshieldemitter",
+        "fluxcoil",
+        "fluxdistributor",
+        "auxiliarythrusters",
+        "heavyarmor"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "guardian_Strike",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 007": "plasma",
+                "WS 008": "plasma"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "locust",
+                "WS 009": "locust"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 010": "phasecl",
+                "WS 011": "phasecl"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 004": "heavyneedler",
+                "WS 005": "heavyneedler"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {"WS 020": "devastator"}
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 012": "amblaster",
+                "WS 013": "amblaster",
+                "WS 014": "lightmg",
+                "WS 015": "lightmg",
+                "WS 016": "lightmg",
+                "WS 017": "lightmg",
+                "WS 018": "lightmg",
+                "WS 019": "lightmg"
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 000": "flak",
+                "WS 001": "flak",
+                "WS 002": "flak",
+                "WS 003": "flak"
+            }
+        }
+    ]
+}

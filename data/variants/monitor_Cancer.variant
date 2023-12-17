@@ -1,0 +1,23 @@
+{
+    "displayName": "Cancer",
+    "fluxCapacitors": 0,
+    "fluxVents": 7,
+    "hullId": "monitor",
+    "hullMods": [
+        "frontemitter",
+        "hardenedshieldemitter",
+        "safetyoverrides",
+    ],
+    "permaMods": [],
+    "sMods": [
+	],
+    "variantId": "monitor_Cancer",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {
+            "WS 001": "flak",
+            "WS 002": "flak"
+        }
+    }]
+}
