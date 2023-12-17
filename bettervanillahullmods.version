@@ -1,0 +1,10 @@
+{
+  "masterVersionFile": "url goes here",
+  "modName": "Better Vanilla Hullmods",
+  "modVersion":
+    {
+      "major": 0,
+      "minor": 5,
+      "patch": 0
+    },
+}
