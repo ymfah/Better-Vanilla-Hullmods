@@ -12,6 +12,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.util.Misc;
 
+import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+
 public class ShieldShuntAlt extends BaseHullMod {
 
 	//public static float EMP_RESISTANCE = 50f;
@@ -22,6 +25,8 @@ public class ShieldShuntAlt extends BaseHullMod {
 	public static float SPEED_BONUS = 15f;
 	public static float SMOD_SPEED_BONUS = 15f;
 	
+	private ShipHullSpecAPI hullSpec;
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
 		
@@ -29,6 +34,12 @@ public class ShieldShuntAlt extends BaseHullMod {
 		stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS + (sMod ? SMOD_ARMOR_BONUS : 0));
 		//stats.getEmpDamageTakenMult().modifyMult(id, 1f - EMP_RESISTANCE * 0.01f);
 		stats.getMaxSpeed().modifyPercent(id, SPEED_BONUS + (sMod ? SMOD_SPEED_BONUS : 0));
+
+
+		
+		//variant.getHullSpec().setShipSystemId("fortressshield");
+		
+		
 	}
 	
 	@Override
@@ -50,6 +61,7 @@ public class ShieldShuntAlt extends BaseHullMod {
 				!ship.getVariant().hasHullMod("frontshield")) return false;
 		if (ship.getVariant().hasHullMod(HullMods.SHIELD_SHUNT)) return true;
 		if (ship.getVariant().hasHullMod(HullMods.MAKESHIFT_GENERATOR)) return false;
+		if (ship.getVariant().hasHullMod(HullMods.PHASE_FIELD) && ship.getVariant().getHullSpec().getShipDefenseId() == "phasecloak") return true;
 		return ship != null && ship.getShield() != null;
 	}
 	
@@ -57,7 +69,7 @@ public class ShieldShuntAlt extends BaseHullMod {
 		if (ship.getVariant().hasHullMod(HullMods.MAKESHIFT_GENERATOR)) {
 			return "Incompatible with Makeshift Shield Generator";
 		}
-		return "Ship has no shields";
+		return "Ship has no standard phase or shields";
 	}
 	
 	public String getSModDescriptionParam(int index, HullSize hullSize) {
@@ -73,6 +85,9 @@ public class ShieldShuntAlt extends BaseHullMod {
 		// Makeshift Shield Generator. Made those incompatible. -am
 		return true;
 	}
+	
+	
+	
 	
 }
 

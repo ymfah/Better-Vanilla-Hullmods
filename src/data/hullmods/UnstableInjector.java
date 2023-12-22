@@ -23,6 +23,7 @@ public class UnstableInjector extends BaseHullMod {
 //	private static final float RANGE_MULT = 0.85f;
 //	private static final float FIGHTER_RATE = 25f;
 	private static final float MAX_CR_PENALTY = 0.1f;
+	private static final float ENGINE_MALFUNCTION_PROB = 0.01f;
 	
 	//private static final float ACCELERATION_BONUS = 100f;
 	//private static final float EXTRA_DAMAGE = 300f;
@@ -39,7 +40,9 @@ public class UnstableInjector extends BaseHullMod {
 //		stats.getBallisticWeaponRangeBonus().modifyMult(id, RANGE_MULT);
 //		stats.getEnergyWeaponRangeBonus().modifyMult(id, RANGE_MULT);	
 //		stats.getFighterRefitTimeMult().modifyPercent(id, FIGHTER_RATE);
-		stats.getMaxCombatReadiness().modifyFlat(id, -MAX_CR_PENALTY, "Unstable injector penalty");
+//		stats.getMaxCombatReadiness().modifyFlat(id, -MAX_CR_PENALTY, "Unstable injector penalty");
+
+		stats.getEngineMalfunctionChance().modifyFlat(id, ENGINE_MALFUNCTION_PROB);
 		
 		
 		if (sMod) stats.getDeceleration().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
@@ -55,7 +58,8 @@ public class UnstableInjector extends BaseHullMod {
 		if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue();
 		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue();
 		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
-		if (index == 4) return "" + (int) Math.round(MAX_CR_PENALTY * 100f) + "%";
+		if (index == 4) return "" + (int) Math.round(ENGINE_MALFUNCTION_PROB * 100f) + "%";
+//		if (index == 4) return "" + (int) Math.round(MAX_CR_PENALTY * 100f) + "%";
 //		if (index == 4) return "" + (int) Math.round((1f - RANGE_MULT) * 100f) + "%";
 //		if (index == 5) return "" + (int) Math.round(FIGHTER_RATE) + "%";
 //		if (index == 4) return "" + (int) ACCELERATION_BONUS;

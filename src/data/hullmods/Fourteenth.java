@@ -1,9 +1,22 @@
 package data.hullmods;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+
+import com.fs.starfarer.api.combat.ShipAPI;
+
+import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+
+import com.fs.starfarer.api.Global;
+
 
 public class Fourteenth extends BaseHullMod {
 
@@ -23,7 +36,7 @@ public class Fourteenth extends BaseHullMod {
 	private static final float DISSIPATION_MULT = 1.05f;
 	private static final float HANDLING_MULT = 0.92f;
 	private static final float SMOD_ARMOR_BONUS = -100f;
-	private static final float SMOD_HANDLING_MULT = 1.24f;
+	private static final float SMOD_HANDLING_MULT = 1.16f;
 	
 	/*private static Map mag = new HashMap();
 	static {
@@ -63,17 +76,40 @@ public class Fourteenth extends BaseHullMod {
 			stats.getMaxTurnRate().modifyMult(id, SMOD_HANDLING_MULT);
 			stats.getTurnAcceleration().modifyMult(id, SMOD_HANDLING_MULT);
 		}
+		
+		
+		String hullId = stats.getVariant().getHullSpec().getHullId();
+		
+		if(hullId.startsWith("enforcer_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("burndrive"); //revert to base forced
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("ammofeed");
+		} else if(hullId.startsWith("dominator_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("burndrive");
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("ammofeed");
+			
+		} else if(hullId.startsWith("eagle_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("maneuveringjets");
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("microburn");
+			
+		} else if(hullId.startsWith("falcon_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("maneuveringjets");
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("plasmajets");
+			
+		} else if(hullId.startsWith("legion_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("burndrive");
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("fastmissileracks");
+			
+		} else if(hullId.startsWith("onslaught_xiv")){
+			if(!sMod) stats.getVariant().getHullSpec().setShipSystemId("burndrive");
+			if(sMod) stats.getVariant().getHullSpec().setShipSystemId("displacer_degraded");
+			
+		} 
+		
+		
+		
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-//		if (index == 0) return "" + (int) ((Float) mag.get(HullSize.FRIGATE) * 100f);
-//		if (index == 1) return "" + (int) ((Float) mag.get(HullSize.DESTROYER) * 100f);
-//		if (index == 2) return "" + (int) ((Float) mag.get(HullSize.CRUISER) * 100f);
-//		if (index == 3) return "" + (int) ((Float) mag.get(HullSize.CAPITAL_SHIP) * 100f);
-		//if (index == 0) return Misc.getRoundedValue((Float) mag.get(HullSize.FRIGATE) + 1f);
-		//if (index == 1) return Misc.getRoundedValue((Float) mag.get(HullSize.DESTROYER) + 1f);
-		//if (index == 2) return Misc.getRoundedValue((Float) mag.get(HullSize.CRUISER) + 1f);
-		//if (index == 3) return Misc.getRoundedValue((Float) mag.get(HullSize.CAPITAL_SHIP) + 1f);
 		if (index == 0) return Misc.getRoundedValue(ARMOR_BONUS);
 		if (index == 1) return "" + (int) Math.round((1f - HANDLING_MULT) * 100f) + "%"; // + Strings.X;
 		if (index == 2) return "" + (int) Math.round((CAPACITY_MULT - 1f) * 100f) + "%"; 
@@ -85,17 +121,51 @@ public class Fourteenth extends BaseHullMod {
 		if (index == 1) return "" + (int) Math.round((SMOD_HANDLING_MULT - 1f) * 100f) + "%"; // + Strings.X;
 		return null;
 	}
+	
+	
+	public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec, boolean isForBuildInList) {
+		float opad = 10f;
+		Color h = Misc.getHighlightColor();;
+		String hullId = ship.getVariant().getHullSpec().getHullId();
+		
+		tooltip.addPara("The heavier armor plating is completely removed. Negates the armor bonus and reduces it by %s. Increases speed and maneuverability by %s instead of decreasing it.", opad, h, new String[]{Misc.getRoundedValue(-SMOD_ARMOR_BONUS),"" + (int) Math.round((SMOD_HANDLING_MULT - 1f) * 100f) + "%"});
+		
+		String systemName = "";
+		
+		if(hullId.startsWith("enforcer_xiv")){
+			systemName = "Accelerated Ammo Feeder";
+		} else if(hullId.startsWith("dominator_xiv")){
+			systemName = "Accelerated Ammo Feeder";
+			
+		} else if(hullId.startsWith("eagle_xiv")){
+			systemName = "Plasma Burn";
+			
+		} else if(hullId.startsWith("falcon_xiv")){
+			systemName = "Plasma Jets";
+			
+		} else if(hullId.startsWith("legion_xiv")){
+			systemName = "Fast Missile Racks";
+			
+		} else if(hullId.startsWith("onslaught_xiv")){
+			systemName = "Degraded Phase Skimmer";
+		}
+		
+		if(systemName != "") {
 
-	/*public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue();
-		if (index == 1) return "" + ((Float) mag.get(Hullize.DESTROYER)).intValue();
-		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue();
-		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
-		if (index == 4) return "" + (int) ACCELERATION_BONUS;
-		//if (index == 5) return "four times";
-		if (index == 5) return "4" + Strings.X;
-		if (index == 6) return "" + BURN_LEVEL_BONUS;
-		return null;
-	}*/
+			tooltip.addPara("For the %s, change the ships system to %s.", opad, h, new String[]{ship.getVariant().getHullSpec().getHullName(), systemName});
+
+		}	
+	}
+	
+	public boolean hasSModEffect() {
+//		return Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean("$global.pkCacheDefendersDefeated");
+
+//		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$global.pkCacheDefendersDefeated");
+		
+//		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$pk_recovered");
+
+		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$pkCacheDefendersDefeated");
+    }
+	
 
 }

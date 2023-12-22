@@ -1,6 +1,90 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.5 - Last changed in 2023.12.17
+[0.96a-RC10] Better Vanilla Hullmods v0.6 - Last changed in 2023.12.18
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
+
+Note: Certain built-in only hullmods may show up if you use console command allhullmods.
+
+[Changes - v0.6] [SUPER ALABASTER REDACTED] edition™
+
+Modified hullmods.
+
+- Fourteenth Battlegroup (Story Reward - Dynamic S-mod)
+
+	S-mod option will show up after defeating a certain automated XIV fleet.
+	Now changes ship system depending on the hull.
+		Enforcer XIV, Dominator XIV - Accelerated Ammo Feeder
+		Eagle XIV - Plasma Burn
+		Falcon XIV - Plasma Jets
+		Legion XIV - Fast Missile Racks
+		Onslaught XIV - Degraded Phase Skimmer
+	S-mod mobility bonus reduced to 16%.
+
+- Advanced Targetting Core
+
+	For the Paragon, the S-mod bonus swaps Fortress shield with Plasma Jets.
+	For others, the S-mod bonus allows the zero flux boost to engage regardless of hard flux.
+	Reduce range by 40% for both cases. (100% -> 60%, point defence unaffected)
+
+- Shield Shunt
+
+	Now can be applied to phase ships to remove Phase.
+	Same bonuses as shielded ships but replaces phase with damper field.
+
+- Converted Cargo Bay
+
+	Added S-mod bonus. Changes system from Flare Launcher to Reserve Deployment.
+	Fighter replacement rate can no longer recover.
+	(Not to be confused with Converted Hanger, this is the unique built in hullmod for the colossus mk3)
+
+- Experimental Phase Coils (Story Reward - Hullmod)
+
+	Can now be obtained by defeating a certain phase [REDACTED].
+	OP increased to 10/20/30/50.
+	Cannot be built in.
+	Added phase requirement.
+
+- High Volition Attractor (Story Reward - Hullmod)
+
+	Can now be obtained by repairing a Coronal Hypershunt.
+	OP increased to 70.
+	Made mote attractor system a requirement.
+	Crew casualty increased by 100000% (They all die on hull damage)
+	Cannot be built in. 
+
+- Drive Field Stabilizer
+
+	S-modding doubles both the burn level bonus and sensor profile drawback.
+
+- Unstable Injector
+
+	Removed combat readiness penalty.
+	Engine now has a slight chance of malfunctions during combat. (No critical malfunctions, 1% per second per engine block)
+
+Restored hidden fighter wings.
+
+- [DORITO REDACTED] Wings (Story Reward - Wings)
+
+	Hypershunt encounters will now drop 2 [DORITO REDACTED] Fighter wings from each variants.
+	Adjusted OP cost to 30.
+
+- Borer Drone Wing
+
+	Now obtainable.
+	Basically a Talon with only a mining laser, less speed and engagement range.
+	OP unadjusted. Still 0.
+	Sold and used by the same factions that use Mining Pods.
+
+- Terminator Drones
+
+	Now obtainable.
+	A PD focused support wing with a PD Laser and an IR Pulse. (Even with Terminator Core hullmod it's not great)
+	OP adjusted to 10.
+	Termination sequence will require a vessel with that system.
+	Sold and used by the same factions that use Xyphos Support Wings.
+
+Modified built-in only hullmods OP cost to make sense in the main menu missions.
+
+Big thanks to DeCEll-1 for the help with the boss drop script!
 
 [Changes - v0.5] Siedge Invictus edition™
 
