@@ -1,0 +1,22 @@
+id,trigger,conditions,script,text,options,notes
+#RULESET_NAME DEA willthefunperson0868 is based,,,,,,
+ymfah_OmegaSalvage,BeatDefendersContinue,$tag:coronal_tap==true score:2000,"AddTextSmall ""Obtained 8x anomalous fighter wings."" highlight
+FireBest OpenInteractionDialog
+ ymfah_OmegaSalvage",Your team was only able to recover a few fragments of what's left of the anomalous vessel.,1:yourOption:Continue,
+ymfah_ZiggySalvage,AfterZigguratDefeat,$option != zigBattleContinue score:2000,"AddTextSmall ""Obtained a special hull modification."" highlight
+FireBest OpenInteractionDialog
+ ymfah_ZiggySalvage",Your team was able to recover what looked like hull modifications dedicated for phase vessels.,1:yourOption:Continue,
+ymfah_AutomatedXIVSalvage,PK14thDefeated,$global.pkCacheDefendersDefeated != true score:2000,"$global.pkCacheDefendersDefeated = true
+AddTextSmall ""Discovered use of AI warships by XIV flotilla"" highlight
+AddTextSmall ""Learned how to build-in the Fourteenth Battlegroup hullmod"" highlight","You receive a disturbing post-battle report from your tech officer: the command and control centers of the XIV Battleground ships you fought appear to have been modified to enable complete control of all systems by AI cores.
+
+It doesn't look like Tri-Tachyon work, either. This was done by the Hegemony.",,
+ymfah_HypershuntRepaired,CTapRepairInitiatedText,$customType == coronal_tap score:2000,"AddTextSmall ""Obtained a special hull modification."" highlight
+FireBest OpenInteractionDialog
+ ymfah_HypershuntRepaired","Your crews finish offloading the raw materials and you send an activation signal to the structure's distributed repair nodes.
+
+There's barely any reaction at first, just a smattering of previous undetected relays pinging one another through the superstructure. Your science officer assures you that the repair rate will increase exponentially, pulling up a display showing the relay pings expanding outward and the energy transmission curve steadily rising. After only minutes, despite little visual change, the overall heat output on sensors has increased dramatically. Whatever is quickening in the heart of this celestial machine...  
+
+""Captain,"" your science officer interrupts your thoughts hesitantly, ""We may wish to pull the fleet back by a hundred klicks or so."" You nod and give the order.
+
+The $nameInText should be online in short order.",,

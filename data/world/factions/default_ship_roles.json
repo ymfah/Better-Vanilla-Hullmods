@@ -1,0 +1,173 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+		
+		#"monitor_Escort":10,
+		
+		
+	},
+	"combatSmall":{
+		
+		
+		#"shard_left_Attack":5,
+		#"shard_left_Attack2":5,
+		#"shard_right_Attack":10,
+		"monitor_Cancer":4,
+		"monitor_Strike":4,
+		"kite_pirates_Hanger":4,
+		"mudskipper2_Escort":4,
+		"scarab_Coherer":4,
+		"tempest_Hanger":4,
+		
+		"cerberus_Rugged":4,
+		"hound_d_Rugged":4,
+		"hound_luddic_church_Rugged":4,
+		"hound_Rugged":4,
+		"hound_d_pirates_Rugged":4,
+		"vanguard_pirates_Rugged":4,
+		"vanguard_Rugged":4,
+		
+		
+		
+		
+		
+		
+	},
+	"combatMedium":{
+		"buffalo2_Hanger":4,
+		
+		#"sunder_Assault":4,
+		"medusa_Coherer":4,
+		"sunder_LG_Coherer":4,
+		
+	},
+	"combatLarge":{
+		#"aurora_Balanced":2,
+		"aurora_Overdriven":4,
+		"apex_Unstable":4,
+		"colossus2_Assult":4,
+		"venture_pather_Assult":4,
+		"apogee_Overdriven":4,
+		"champion_Coherer":4,
+		"venture_p_Hanger":4,
+		"venture_pather_Overdriven":4,
+		"dominator_XIV_Overdriven":4,
+		
+	},
+	"combatCapital":{
+		#"prometheus2_Standard":10,
+		"nova_Overdriven":4,
+		"odyssey_Overdriven":4,
+		"onslaught_xiv_Overdriven":4,
+		"paragon_Strike":4,
+		"prometheus2_Overdriven":4,
+		"atlas2_Hanger":4,
+		"atlas2_PD":4,
+		"conquest_Makeshift":4,
+		"radiant_Overdriven":4,
+		"retribution_Overdriven":4,
+		"invictus_Siedge":4,
+		"onslaught_xiv_Mobile":4,
+		"paragon_Mobile":4,
+		"prometheus2_Escort":4,
+		
+		"tesseract_Missile":4,
+		"tesseract_Overdriven":4,
+		"guardian_Strike":10,
+		
+		
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+		#"cerberus_Hardened":2.5,
+		#"cerberus_Overdriven":2.5,
+		#"cerberus_Shielded":2.5,
+		#"cerberus_Standard":2.5,
+
+		"shepherd_Carrier":4,
+		"cerberus_Rugged":4,
+		"hound_d_Rugged":4,
+		"hound_luddic_church_Rugged":4,
+		"hound_Rugged":4,
+		"hound_d_pirates_Rugged":4,
+	},
+	"combatFreighterMedium":{
+		#"mule_d_pirates_Smuggler":5,
+		#"mule_d_pirates_Standard":5,
+		"gemini_Converted":4,
+	},
+	"combatFreighterLarge":{
+		"venture_Assult":4,
+		"venture_Carrier":4,
+		#"venture_Outdated":4,
+		#"venture_Exploration":3,
+	},
+	
+	"civilianRandom":{
+		#"kite_original_Stock":1,
+		"gemini_Converted":4,
+		"crig_Hanger":4,
+		"dram_Hanger":4,
+	},
+
+	# carriers
+	"carrierSmall":{
+		#"gemini_Standard":5,
+		"gemini_Converted":4,
+		"shepherd_Carrier":4,
+		"condor_Super":4,
+		"drover_Hanger":4,
+	},
+	"carrierMedium":{
+		#"heron_Strike":5,
+		#"heron_Attack":5,
+		#"heron_Attack1":0, # PL-only variant
+		#"heron_Attack2":0, # PL-only variant
+		"heron_Super":5,
+		"mora_DTA":5,
+		"colossus3_Hanger":5,
+	},
+	"carrierLarge":{
+		#"legion_xiv_Elite":10,
+		"astral_Supercarrier":4,
+		"legion_Overdriven":4,
+		"legion_xiv_Nohanger":4,
+		"legion_DTA":4,
+		"legion_xiv_DTA":4,
+		"legion_xiv_Mobile":4,
+		
+	},
+
+	# phase ships
+	"phaseSmall":{
+		#"gremlin_luddic_path_Strike":10,
+		"afflictor_d_pirates_Hanger":4,
+		"gremlin_d_pirates_Hanger":4,
+		"gremlin_luddic_path_Hanger":4,
+		"shade_d_pirates_Hanger":4,
+		
+	},
+	"phaseMedium":{
+		#"harbinger_Strike":10,
+		"harbinger_Converted":4,
+	},
+	"phaseLarge":{
+		#"doom_Strike":4,
+		#"doom_Support":3,
+		#"doom_Attack":3,
+		"doom_Carrier":4,
+	},
+	"phaseCapital":{
+		#"ziggurat_Strike":10,
+		"ziggurat_Missile":10,
+		"ziggurat_Omega":10,
+	},
+	
+	"tankerLarge":{
+		"prometheus_PD":10,
+	},
+	
+}

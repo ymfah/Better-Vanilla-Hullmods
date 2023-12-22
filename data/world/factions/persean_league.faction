@@ -1,0 +1,7 @@
+{
+    "variantOverrides":{
+		"monitor_Cancer":4,
+		"monitor_Strike":4,
+		"heron_Super":5,
+	},
+}

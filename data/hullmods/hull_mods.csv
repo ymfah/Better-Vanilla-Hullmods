@@ -14,7 +14,9 @@ Can not be installed on a frigate or a destroyer, and can not work in conjunctio
 Most combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.","Increases weapon range, more so for larger ships.",Increases the range bonus to %s for cruisers and %s for capital ships.,graphics/hullmods/targeting_core.png
 Shield Shunt,shield_shunt,1,,,"special, engines, offensive, shields, merc, standard","Special, Shields, Engines",3000,,,,3,5,7,10,data.hullmods.ShieldShuntAlt,"Removes the ship's shields. The external emitter nodes are replaced with reinforced plating, increasing the ship's armor by %s. 
 
-The idle power requirement is redirected to the ship's engine, increasing the ship's top speed in combat by %s.","Removes shields, increases armor and improves top speed.","Increases the ship's armor by an additional %s.
+The idle power requirement is redirected to the ship's engine, increasing the ship's top speed in combat by %s.
+
+On phase ships, replace phase with a much simpler damper field.","Removes shields, increases armor and improves top speed.","Increases the ship's armor by an additional %s.
 
 Increases the ship's top speed in combat by an additional %s.",graphics/hullmods/shield_shunt.png
 Special Modifications,andrada_mods,3,,,dmod,Special,10000,,,,2,4,6,10,com.fs.starfarer.api.impl.hullmods.AndradaMods,"During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. 
@@ -31,7 +33,7 @@ Integrated Point Defense AI,pointdefenseai,3,,,"defensive, merc, standard","Weap
 Additionally, all small non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",Small non-missile weapons act as point-defense; PD not affected by decoy flares.,"All small, medium and large non-missile weapons are classified as ""point-defense"", automatically target missiles, and are affected by point-defense stat modifiers.",graphics/hullmods/integrated_point_defense_ai.png
 Unstable Injector,unstable_injector,0,,,"engines, merc, standard",Engines,2500,TRUE,,,5,10,15,25,data.hullmods.UnstableInjector,"Increases the ship's top speed in combat by %s/%s/%s/%s su/second, depending on hull size.
 
-Interferes with systems, reducing combat readiness by %s.","Increases speed, reduces combat readiness.","Increases the ship's top speed bonus by a factor of %s.
+Has a small chance to cause engine malfunctions around %s every second.","Increases speed, reduces combat readiness.","Increases the ship's top speed bonus by a factor of %s.
 
 Ship can no longer decelerate.",graphics/hullmods/unstable_injector.png
 Converted Hangar,converted_hangar,1,,,"special, merc, standard",Fighters,5000,,,,10,10,12,20,data.hullmods.ConvertedHangarAlt,<Tooltip created in script>,Improvised fighter bay for non-carriers.,"Increases the rate at which the fighter replacement rate recovers by %s for cruisers, and by %s for capital ships. No added effect for frigates and destroyers.",graphics/hullmods/converted_hangar.png
@@ -96,9 +98,9 @@ Rugged Construction,rugged,2,,,"no_drop, no_drop_salvage","Special, Defenses, Re
 In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.",Reduces impact of d-mods; ship almost always recoverable if lost.,"Negative effects of d-mods are only reduced by %s.
 
 Each d-mod increases the armor by %s, and hull integrity by %s.",graphics/hullmods/rugged_construction.png
-Advanced Targeting Core,advancedcore,,,,"no_drop, no_drop_salvage",Weapons,,,,,5,10,15,25,data.hullmods.AdvancedTargetingCore,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
+Advanced Targeting Core,advancedcore,,,,"no_drop, no_drop_salvage",Weapons,,,,,70,70,70,70,data.hullmods.AdvancedTargetingCore,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
 
-Precludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",Greatly extends non-missile weapon range.,"Certain protocols are disabled, similar to safety overrides. This allows the zero-flux engine boost to take effect regardless of flux level.
+Precludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",Greatly extends non-missile weapon range.,"Certain protocols are disabled in favor of mobility, similar to safety overrides. 
 
 However, this reduces the range bonus of ballistic and energy weapons to %s. The range of point-defense weapons is unaffected.",graphics/hullmods/advanced_targeting_core.png
 Expanded Deck Crew,expanded_deck_crew,1,,,"special, merc, standard",Fighters,4000,,,,5,10,15,25,data.hullmods.ExpandedDeckCrewAlt,"Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s. Time to launch replacement fighters is decreased by %s.
@@ -126,4 +128,23 @@ Reinforced Bulkheads,reinforcedhull,0,,,"defensive, merc, standard",Defenses,250
 Blast Doors,blast_doors,0,,,"defensive, merc, standard",Defenses,2500,TRUE,,,3,5,8,12,data.hullmods.BlastDoors,"Installs additional hermetic and heavily reinforced doors at critical junctures throughout the ship. Increases hull integrity by %s.
 
 Ship takes %s fewer crew casualties from hull damage sustained in combat.","Increases hull integrity, reduces crew casualties.",Increases the crew casualty reduction to %s.,graphics/hullmods/blast_doors.png
-Experimental Phase Coils,ex_phase_coils,2,,,"phase, merc, standard",Phase,5000,,,,5,10,15,25,data.hullmods.ExperimentalPhaseCoilsAlt,Reduces phase cloak cooldown by %s.,Greatly reduces phase cloak cooldown.,,graphics/hullmods/phase_coils_experimental.png
+Experimental Phase Coils,ex_phase_coils,,,,"no_drop, no_drop_salvage, phase, no_build_in",Phase,5000,,,,10,20,30,50,data.hullmods.ExperimentalPhaseCoilsAlt,Reduces phase cloak cooldown by %s.,Greatly reduces phase cloak cooldown.,,graphics/hullmods/phase_coils_experimental.png
+Drive Field Stabilizer,drive_field_stabilizer,,,,"no_drop, no_drop_salvage",Logistics,,,,,0,0,0,0,data.hullmods.DriveFieldStabilizerAlt,"Stabilizes the fleet's drive bubble, increasing the maximum burn of the fleet by %s. The effect of multiple stabilizers is cumulative.
+
+Increases the ship's sensor profile by %s.",Increase fleetwide burn level.,"Stabilizes the fleet's drive bubble, increasing the maximum burn of the fleet by %s. The effect of multiple stabilizers is cumulative.
+
+Increases the ship's sensor profile by %s.",graphics/hullmods/augmented_drive_field.png
+High Volition Attractor,high_frequency_attractor,,,,"no_drop, no_drop_salvage, phase, no_build_in","Special, Phase",50000,,,,15,30,45,70,data.hullmods.HighVolitionAttractor,"An experimental modification allowing high-frequency motes to be warped in by the rift core on board the ship.
+
+This modification is barely kept stable. If the hull is damaged, all crew aboard dies.",Launches more powerful high-frequency motes.,,graphics/hullmods/high_volition_attractor.png
+Phase Field,phasefield,,,,,,,,TRUE,,0,0,0,0,data.hullmods.PhaseFieldAlt,"The ship is able to run a low-grade phase field for extended periods of time, reducing its effective sensor profile by %s.",Reduces fleetwide sensor profile.,,graphics/hullmods/phase_field.png
+#Makeshift Phase Coils,makeshiftphase,3,,,"no_drop, no_drop_salvage, phase, standard",Phase,7000,,,,5,10,15,25,data.hullmods.MakeshiftPhase,"Replace the ship's system with an inefficient phase system that does not require external phase coils.
+
+Unlike regular phase systems that use base flux, it has an upkeep of %s of maximum flux per second. Can cause overloads.",Installs basic phase capability on non-phase ship.,,graphics/hullmods/phase_coil_instability.png
+#Ablative Armor,ablative_armor,,,,"no_drop, no_drop_salvage",Defenses,,,,,0,0,0,0,data.hullmods.AblativeArmorAlt,"An ancient design intended to stop micro-meteorites through sheer volume of material in place, before the advent of ""spaced"" armor.
+
+Reduces the effective armor strength for the damage reduction calculation to %s of its actual value. However, ships of this design tend to carry extremely heavy armor.",Reduces damage reduction by armor.,Outfit the ship's canister flak system to output a more experimental orion device.,graphics/hullmods/ablative_armor.png
+Converted Cargo Bay,converted_bay,1,,,"no_drop, no_drop_salvage",,,,,,15,30,45,70,data.hullmods.ConvertedCargoBay,"This ship's cargo hold has been converted to house a pair of fighter bays. The improvised manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.",Pair of improvised fighter bays.,"Push the flight deck to its limits.
+
+Fighter replacement rate can no longer recover.",graphics/hullmods/converted_hangar.png
+,,,,,,,,,,,,,,,,,,,

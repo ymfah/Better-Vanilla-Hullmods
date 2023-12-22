@@ -1,0 +1,48 @@
+{
+    "displayName": "Missile",
+    "fluxCapacitors": 9,
+    "fluxVents": 0,
+    "goalVariant": true,
+    "hullId": "tesseract",
+    "hullMods": [
+        "eccm",
+        "frontemitter",
+        "extendedshieldemitter"
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "variantId": "tesseract_Missile",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 008": "resonatormrm"}
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {"WS 009": "rifttorpedo"}
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 006": "resonatormrm",
+                "WS 007": "resonatormrm",
+                "WS 010": "resonatormrm"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS 000": "amsrm",
+                "WS 001": "amsrm",
+                "WS 002": "amsrm",
+                "WS 003": "amsrm",
+                "WS 004": "amsrm",
+                "WS 005": "amsrm"
+            }
+        }
+    ]
+}
