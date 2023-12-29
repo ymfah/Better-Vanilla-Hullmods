@@ -56,7 +56,7 @@ public class Fourteenth extends BaseHullMod {
 		// just generally better armour - and structure!
 		//stats.getArmorBonus().modifyMult(id, (Float) mag.get(hullSize) + 1.00f); // * ARMOR_BONUS_MULT); 
 		//stats.getHullBonus().modifyPercent(id, (Float) mag.get(hullSize) * 0.5f); // some hull. 
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (!sMod) {
 			stats.getArmorBonus().modifyFlat(id, (Float) ARMOR_BONUS);
 		
@@ -126,37 +126,44 @@ public class Fourteenth extends BaseHullMod {
 	public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec, boolean isForBuildInList) {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();;
-		String hullId = ship.getVariant().getHullSpec().getHullId();
 		
 		tooltip.addPara("The heavier armor plating is completely removed. Negates the armor bonus and reduces it by %s. Increases speed and maneuverability by %s instead of decreasing it.", opad, h, new String[]{Misc.getRoundedValue(-SMOD_ARMOR_BONUS),"" + (int) Math.round((SMOD_HANDLING_MULT - 1f) * 100f) + "%"});
-		
-		String systemName = "";
-		
-		if(hullId.startsWith("enforcer_xiv")){
-			systemName = "Accelerated Ammo Feeder";
-		} else if(hullId.startsWith("dominator_xiv")){
-			systemName = "Accelerated Ammo Feeder";
-			
-		} else if(hullId.startsWith("eagle_xiv")){
-			systemName = "Plasma Burn";
-			
-		} else if(hullId.startsWith("falcon_xiv")){
-			systemName = "Plasma Jets";
-			
-		} else if(hullId.startsWith("legion_xiv")){
-			systemName = "Fast Missile Racks";
-			
-		} else if(hullId.startsWith("onslaught_xiv")){
-			systemName = "Degraded Phase Skimmer";
-		}
-		
+
+		if (isForModSpec || ship == null || ship.getMutableStats() == null) return;
+
+		String hullId = ship.getVariant().getHullSpec().getHullId();
+		String systemName = getSystemName(hullId);
+
 		if(systemName != "") {
 
 			tooltip.addPara("For the %s, change the ships system to %s.", opad, h, new String[]{ship.getVariant().getHullSpec().getHullName(), systemName});
 
 		}	
 	}
-	
+
+	private static String getSystemName(String hullId) {
+		String systemName = "";
+
+		if(hullId.startsWith("enforcer_xiv")){
+			systemName = "Accelerated Ammo Feeder";
+		} else if(hullId.startsWith("dominator_xiv")){
+			systemName = "Accelerated Ammo Feeder";
+
+		} else if(hullId.startsWith("eagle_xiv")){
+			systemName = "Plasma Burn";
+
+		} else if(hullId.startsWith("falcon_xiv")){
+			systemName = "Plasma Jets";
+
+		} else if(hullId.startsWith("legion_xiv")){
+			systemName = "Fast Missile Racks";
+
+		} else if(hullId.startsWith("onslaught_xiv")){
+			systemName = "Degraded Phase Skimmer";
+		}
+		return systemName;
+	}
+
 	public boolean hasSModEffect() {
 //		return Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean("$global.pkCacheDefendersDefeated");
 

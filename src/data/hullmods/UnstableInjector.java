@@ -9,8 +9,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class UnstableInjector extends BaseHullMod {
 	
-	public static float SMOD_MANEUVER_PENALTY = 100f;
-	public static float SMOD_SPEED_MULT = 3f;
+	public static float SMOD_MANEUVER_PENALTY = 90f;
+	public static float SMOD_SPEED_MULT = 2.5f;
 
 	private static Map mag = new HashMap();
 	static {
@@ -22,20 +22,22 @@ public class UnstableInjector extends BaseHullMod {
 	
 //	private static final float RANGE_MULT = 0.85f;
 //	private static final float FIGHTER_RATE = 25f;
-	private static final float MAX_CR_PENALTY = 0.1f;
-	private static final float ENGINE_MALFUNCTION_PROB = 0.01f;
+//	private static final float MAX_CR_PENALTY = 0.1f;
+	private static final float ENGINE_MALFUNCTION_PROB = 0.005f;
 	
 	//private static final float ACCELERATION_BONUS = 100f;
 	//private static final float EXTRA_DAMAGE = 300f;
 	//private static final int BURN_LEVEL_BONUS = 1;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getMaxSpeed().modifyFlat(id, (Float) mag.get(hullSize));
 		if (sMod) {
 			stats.getMaxSpeed().modifyFlat(id, (Float) mag.get(hullSize)*SMOD_SPEED_MULT);
+			stats.getZeroFluxSpeedBoost().modifyFlat(id, (Float) mag.get(hullSize)*SMOD_SPEED_MULT);
 		} else {
 			stats.getMaxSpeed().modifyFlat(id, (Float) mag.get(hullSize));
+			stats.getZeroFluxSpeedBoost().modifyFlat(id, (Float) mag.get(hullSize));
 		}
 //		stats.getBallisticWeaponRangeBonus().modifyMult(id, RANGE_MULT);
 //		stats.getEnergyWeaponRangeBonus().modifyMult(id, RANGE_MULT);	
@@ -58,7 +60,7 @@ public class UnstableInjector extends BaseHullMod {
 		if (index == 1) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue();
 		if (index == 2) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue();
 		if (index == 3) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
-		if (index == 4) return "" + (int) Math.round(ENGINE_MALFUNCTION_PROB * 100f) + "%";
+		if (index == 4) return "" + ENGINE_MALFUNCTION_PROB * 100f + "%";
 //		if (index == 4) return "" + (int) Math.round(MAX_CR_PENALTY * 100f) + "%";
 //		if (index == 4) return "" + (int) Math.round((1f - RANGE_MULT) * 100f) + "%";
 //		if (index == 5) return "" + (int) Math.round(FIGHTER_RATE) + "%";

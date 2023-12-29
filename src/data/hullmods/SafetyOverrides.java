@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -74,9 +75,15 @@ public class SafetyOverrides extends BaseHullMod {
 		boolean sMod = isSMod(stats);
 		if (sMod) {
 			float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);
-			stats.getCriticalMalfunctionChance().modifyFlat(id, 0.5f * effect);
 			stats.getWeaponMalfunctionChance().modifyFlat(id, WEAPON_MALFUNCTION_PROB * effect);
+			stats.getEngineMalfunctionChance().modifyFlat(id, ENGINE_MALFUNCTION_PROB);
 		}
+	}
+
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		boolean sMod = isSMod(ship);
+		if(sMod)ship.addListener(new IllAdvised.CritMalfunctionListener(ship));
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

@@ -27,7 +27,7 @@ public class FluxCoilAdjunct extends BaseHullMod {
 	}
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		float cap = (Float) mag.get(hullSize);
 		if (sMod) {
 			cap += (Float) magBonus.get(hullSize);

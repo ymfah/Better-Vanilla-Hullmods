@@ -13,12 +13,16 @@ public class DriveFieldStabilizerAlt extends BaseHullMod {
 	public static final float SMOD_SENSOR_PROFILE = 400f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
-		if(!sMod) stats.getDynamic().getMod(Stats.FLEET_BURN_BONUS).modifyFlat(id, BURN_BONUS);
-		if(!sMod) stats.getDynamic().getMod(Stats.FLEET_BURN_BONUS).modifyFlat(id, SMOD_BURN_BONUS);
-		
-		stats.getSensorProfile().modifyFlat(id, SENSOR_PROFILE);
+		if(!sMod) {
+			stats.getDynamic().getMod(Stats.FLEET_BURN_BONUS).modifyFlat(id, BURN_BONUS);
+			stats.getSensorProfile().modifyFlat(id, SENSOR_PROFILE);
+		}
+		if(sMod) {
+			stats.getDynamic().getMod(Stats.FLEET_BURN_BONUS).modifyFlat(id, SMOD_BURN_BONUS);
+			stats.getSensorProfile().modifyFlat(id, SMOD_SENSOR_PROFILE);
+		}
 		
 	}
 	

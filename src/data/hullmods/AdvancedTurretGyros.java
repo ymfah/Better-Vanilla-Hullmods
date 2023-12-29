@@ -14,8 +14,8 @@ public class AdvancedTurretGyros extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getWeaponTurnRateBonus().modifyPercent(id, TURRET_SPEED_BONUS);
 		stats.getBeamWeaponTurnRateBonus().modifyPercent(id, TURRET_SPEED_BONUS);
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			stats.getDamageToMissiles().modifyPercent(id, SMOD_BONUS);
 			stats.getDamageToFighters().modifyPercent(id, SMOD_BONUS);

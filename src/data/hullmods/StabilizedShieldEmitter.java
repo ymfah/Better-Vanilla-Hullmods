@@ -12,7 +12,7 @@ public class StabilizedShieldEmitter extends BaseHullMod {
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getShieldUpkeepMult().modifyMult(id, 1f - SHIELD_UPKEEP_BONUS * 0.01f);
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			stats.getShieldSoftFluxConversion().modifyFlat(id, SMOD_SOFT_FLUX_CONVERSION);
 		}

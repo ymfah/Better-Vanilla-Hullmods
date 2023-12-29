@@ -15,8 +15,8 @@ public class AutomatedRepairUnit extends BaseHullMod {
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		float bonus = REPAIR_BONUS;
 		if (sMod) bonus += SMOD_REPAIR_BONUS;
 		stats.getCombatEngineRepairTimeMult().modifyMult(id, 1f - bonus * 0.01f);

@@ -13,7 +13,7 @@ public class ReinforcedBulkheads extends BaseHullMod {
 	private float DMOD_NUM = 0;
 
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		DMOD_NUM = DModManager.getNumNonBuiltInDMods(stats.getVariant());
 		

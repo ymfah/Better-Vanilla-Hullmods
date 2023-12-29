@@ -27,8 +27,8 @@ public class DefensiveTargetingArrayAlt extends BaseHullMod {
 		fighter.getMutableStats().getDamageToDestroyers().modifyFlat(id, SHIP_DAMAGE_BONUS / 100f);
 		fighter.getMutableStats().getDamageToCruisers().modifyFlat(id, SHIP_DAMAGE_BONUS / 100f);
 		fighter.getMutableStats().getDamageToCapital().modifyFlat(id, SHIP_DAMAGE_BONUS / 100f);
-		
-		boolean sMod = isSMod(ship) || ship.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(ship) || ship.getVariant().getHullMods().contains("integrationsuite") || ship.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			fighter.getMutableStats().getBallisticWeaponRangeBonus().modifyFlat(id, SMOD_RANGE_BONUS);
 			fighter.getMutableStats().getEnergyWeaponRangeBonus().modifyFlat(id, SMOD_RANGE_BONUS);

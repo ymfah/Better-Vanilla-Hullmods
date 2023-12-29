@@ -10,9 +10,9 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class ECMPackageAlt extends BaseHullMod {
 	
-	public static float RANGE_BONUS = 25f;
-	public static float REGEN_BONUS = 25f;
-	public static float COOLDOWN_BONUS = 0.8f;
+	public static float RANGE_BONUS = 20f;
+	public static float REGEN_BONUS = 20f;
+	public static float COOLDOWN_BONUS = 0.9f;
 
 	private static Map mag = new HashMap();
 	static {
@@ -24,7 +24,7 @@ public class ECMPackageAlt extends BaseHullMod {
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_FLAT).modifyFlat(id, (Float) mag.get(hullSize));
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getSystemRangeBonus().modifyPercent(id, RANGE_BONUS);
 		if (sMod) {
 			stats.getSystemRegenBonus().modifyPercent(id, REGEN_BONUS);

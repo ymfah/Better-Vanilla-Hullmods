@@ -12,7 +12,7 @@ public class FluxBreakers extends BaseHullMod {
 	public static float SMOD_VENT_BONUS = 10f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getEmpDamageTakenMult().modifyMult(id, 1f - FLUX_RESISTANCE * 0.01f);
 		//stats.getFluxDissipation().modifyPercent(id,DISSIPATION_BONUS);
 		stats.getVentRateMult().modifyPercent(id, VENT_RATE_BONUS + (sMod ? SMOD_VENT_BONUS : 0));

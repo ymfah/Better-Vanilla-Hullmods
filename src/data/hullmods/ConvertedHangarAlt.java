@@ -6,6 +6,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -87,10 +88,10 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		
 		numBays += stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_MOD).computeEffective(0f);
 		stats.getNumFighterBays().modifyFlat(id, numBays);
-		
-		
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			float bonus = 0f;
 			if (hullSize == HullSize.CRUISER) bonus = SMOD_CRUISER;
@@ -106,14 +107,13 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		boolean refitPenalty = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REFIT_PENALTY).computeEffective(0f) <= 0;
 		
 		if (refitPenalty) {
-			stats.getFighterRefitTimeMult().modifyMult(id, REPLACEMENT_TIME_MULT);
-			stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_DECREASE_MULT).modifyMult(id, 1f / REPLACEMENT_TIME_MULT);
-			stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_INCREASE_MULT).modifyMult(id, 1f / REPLACEMENT_TIME_MULT);
+			stats.getFighterRefitTimeMult().modifyMult(id, (1+(REPLACEMENT_TIME_MULT-1)/(bays+1)));
+			stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_DECREASE_MULT).modifyMult(id, 1f / (1+(REPLACEMENT_TIME_MULT-1)/(bays+1)));
+			stats.getDynamic().getStat(Stats.REPLACEMENT_RATE_INCREASE_MULT).modifyMult(id, 1f / (1+(REPLACEMENT_TIME_MULT-1)/(bays+1)));
 		}
 		
 		if (rearmIncrease) {
-			//stats.getDynamic().getMod(Stats.FIGHTER_REARM_TIME_EXTRA_FLAT_MOD).modifyFlat(id, EXTRA_REARM_TIME);
-			stats.getDynamic().getMod(Stats.FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD).modifyFlat(id, REARM_TIME_FRACTION);
+			stats.getDynamic().getMod(Stats.FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD).modifyFlat(id, REARM_TIME_FRACTION/(bays+1));
 		}
 		
 		if (dpIncrease) {
@@ -265,11 +265,17 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
-		
+
+
 		
 		tooltip.addPara("Converts the ship's standard shuttle hangar to house a fighter bay. "
 				+ "The improvised flight deck, its crew, and the related machinery all function "
 				+ "at a pace below that of a dedicated carrier.", opad);
+
+		if (isForModSpec || ship == null || ship.getMutableStats() == null) return;
+
+		int bays = 0;
+		bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
 
 
 //		tooltip.addPara("Increases fighter refit time by %s, "
@@ -286,9 +292,9 @@ public class ConvertedHangarAlt extends BaseHullMod {
 				+ "take %s of their base refit time to relaunch, "
 				+ "where normally it takes under a second. "
 				+ "", opad, h,
-				"" + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,
-				"" + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,
-				"" + (int) Math.round(REARM_TIME_FRACTION * 100f) + "%");
+				"" + Misc.getRoundedValueMaxOneAfterDecimal((1+(REPLACEMENT_TIME_MULT-1)/(bays+1))) + Strings.X,
+				"" + Misc.getRoundedValueMaxOneAfterDecimal((1+(REPLACEMENT_TIME_MULT-1)/(bays+1))) + Strings.X,
+				"" + (int) Math.round((REARM_TIME_FRACTION/(bays+1)) * 100f) + "%");
 		
 		
 		tooltip.addPara("Increases the minimum crew by %s to account for pilots and flight crews. "
@@ -301,7 +307,7 @@ public class ConvertedHangarAlt extends BaseHullMod {
 				"" + (int) + FIGHTER_OP_PER_DP,
 				"" + (int) + MIN_DP);
 		
-		if (isForModSpec || ship == null || ship.getMutableStats() == null) return;
+
 		
 		MutableShipStatsAPI stats = ship.getMutableStats();
 		boolean crewIncrease = stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_CREW_INCREASE).computeEffective(0f) <= 0;
@@ -311,7 +317,7 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		
 		int dpMod = computeDPModifier(getFighterOPCost(stats));
 		
-		int bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
+
 		
 		if(hullSize == HullSize.CRUISER || hullSize == HullSize.CAPITAL_SHIP || bays > 0) dpIncrease = false;
 		if (dpMod > 0) {

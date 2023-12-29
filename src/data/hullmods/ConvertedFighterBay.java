@@ -50,7 +50,7 @@ public class ConvertedFighterBay extends BaseHullMod {
 		stats.getMinCrewMod().modifyPercent(id, -crewReduction);
 		stats.getCargoMod().modifyFlat(id, cargo);
 
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		//DP decrease
 		float dpMod = -1f * bays * (Float) dpsize.get(hullSize);

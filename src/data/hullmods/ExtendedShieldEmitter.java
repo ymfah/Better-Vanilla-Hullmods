@@ -11,7 +11,7 @@ public class ExtendedShieldEmitter extends BaseHullMod {
 	public static final float SMOD_ARC_BONUS = 60f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getShieldArcBonus().modifyFlat(id, SHIELD_ARC_BONUS + (sMod ? SMOD_ARC_BONUS : 0));
 	}
 	

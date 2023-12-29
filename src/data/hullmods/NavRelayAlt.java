@@ -27,8 +27,8 @@ public class NavRelayAlt extends BaseHullMod {
 		MutableShipStatsAPI stats = fighter.getMutableStats();
 		
 		stats.getMaxSpeed().modifyMult(id, 1f + SPEED_INCREASE);
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) fighter.getMutableStats().getFighterWingRange().modifyMult(id, 1f + SMOD_RANGE_BONUS);
 	}
 	

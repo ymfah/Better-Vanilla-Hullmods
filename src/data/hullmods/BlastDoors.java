@@ -16,7 +16,7 @@ public class BlastDoors extends BaseHullMod {
 //		stats.getCargoMod().modifyPercent(id, -50f);
 //		stats.getCargoMod().modifyPercent(id + "sfsdfd", +25f);
 //		stats.getMaxCrewMod().modifyPercent(id, 100);
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		stats.getHullBonus().modifyPercent(id, HULL_BONUS);
 		stats.getCrewLossMult().modifyMult(id, 1f - (CASUALTY_REDUCTION + (sMod ? SMOD_BONUS : 0)) * 0.01f);

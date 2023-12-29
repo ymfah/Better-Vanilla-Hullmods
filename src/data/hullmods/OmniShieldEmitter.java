@@ -13,7 +13,7 @@ public class OmniShieldEmitter extends BaseHullMod {
 	//public static float SHIELD_UPKEEP_BONUS = 25f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (!sMod) {
 			stats.getShieldArcBonus().modifyMult(id, 1f - ARC_PENALTY * 0.01f);
 		}

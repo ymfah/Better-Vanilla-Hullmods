@@ -27,8 +27,8 @@ public class ConvertedCargoBay extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		//stats.getFighterRefitTimeMult().modifyPercent(id, REFIT_TIME_PLUS);
 		stats.getNumFighterBays().modifyFlat(id, 2f);
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		if(stats.getVariant().getHullSpec().getHullId().startsWith("colossus3")) {
 		
@@ -59,10 +59,12 @@ public class ConvertedCargoBay extends BaseHullMod {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
-		String hullId = ship.getVariant().getHullSpec().getHullId();
 		
 		tooltip.addPara("Push the flight deck to its limits. Fighter replacement rate can %s.", opad, bad, new String[]{"no longer recover"});
-		
+
+
+		if (isForModSpec || ship == null || ship.getMutableStats() == null) return; //prevents crash from viewing it as modspec/progressive smod
+		String hullId = ship.getVariant().getHullSpec().getHullId();
 		String systemName = "";
 		
 		if(hullId.startsWith("colossus3")){

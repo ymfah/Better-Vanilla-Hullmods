@@ -17,8 +17,8 @@ public class FrontShieldEmitter extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		
 		//stats.getShieldUpkeepMult().modifyMult(id, 1f - UPKEEP_BONUS * 0.01f);
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (!sMod) stats.getShieldArcBonus().modifyPercent(id, ARC_BONUS);
 		if (sMod) stats.getShieldArcBonus().modifyPercent(id, SMOD_ARC_BONUS);
 	}

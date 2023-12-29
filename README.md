@@ -1,8 +1,101 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.6 - Last changed in 2023.12.18
+[0.96a-RC10] Better Vanilla Hullmods v0.7 - Last changed in 2023.12.30
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
 
 Note: Certain built-in only hullmods may show up if you use console command allhullmods.
+
+[Changes - v0.7] Ill-Advised Modification 2: Electric Boogaloo edition™
+
+Bug Fixes
+
+- Fixed CTD when used with progressive S-mods.
+
+- Fixed Drive Field Stabilizer S-mod not working.
+
+Modified hullmods.
+
+- Heavy Ballistics Integration
+
+	Integration is removed for versatility. S-mod bonus Removes OP discount.
+	S-mod bonus will now change all large ballistic slots with hybrid slots and increase the arc by 50% (Vanilla ships)
+	For the Conquest, this means that the 4 Large slots will be able to point forwards. However, the arc does not converge.
+	For the Onslaught, this means that all 3 Large slots will be able to point forwards. Dissipation may be a problem.
+	For the Invictus, The 2 large slots in the back-middle can now point forwards. OP is now a big problem.
+	For other ships, refund 10 OP per large ballistic slot. (For modded ships)
+	Invictus cannot use beam weapons due to LIDAR array implementation. Added dynamic flavour text to reflect this.
+
+- Flux Shunt
+
+	S-mod bonus for other ships besides the monitor: reduce hard flux dissipation by 25%, improve overall dissipation by 50%. (For modded ships)
+
+- Ablative Armor
+
+	S-mod bonus changes the defensive system of the Invictus to entropy damper.
+	For other hulls, Revert armor to space grade (10 times less armor, no penalties) and add the reduced amount to hull. (For modded ships)
+
+- Delicate Machinery
+
+	S-mod reduces PPT by 50%.
+	Changes ship depending on the hull.
+		Shade - Change system to overclocked EMP emitter. 3x range. Can no longer phase.
+		Doom - Change system to Interdictor Array. Mines are now deployed automatically to the closest enemy within 1500su.
+		Revenant - Change system to Gargoyle Drones. Removes cargo capacity.
+		For other hulls, activates the S-mod effect of other hullmods. (Excluding logistic hullmods and modded hullmods)
+
+- Ill Advised Modifications
+
+	Updated description to show the probability of malfunctions and critical malfunctions.
+	Critical malfunctions only occur after PPT runs out.
+	Added engine malfunction chance.
+	Activates the S-mod effect of other hullmods. (Excluding logistic hullmods and modded hullmods)
+	Can now be obtained.
+
+- Safety Overrides
+
+	Previous S-mod interaction that gave Ill advised modifications was too harsh and benefited the monitor massively.
+	Penalty updated to current ill advised modifications without the S-mod effect activation.
+	Monitor would suffer from engine malfunctions, and other hulls can avoid critical malfunctions as long as PPT remains.
+
+- Special Modifications
+
+	Improves CR by 7%.
+
+- Converted Hanger
+
+	If the ship already has existing bays, penalty to rearm and replacement time is reduced depending on the number of bays.
+	0 bay = 100% penalty, 1 bay = 50% penalty, 2 bay = 33% penalty and so on.
+
+- Auxiliary Thrusters
+
+	S-mod bonus removes acceleration/deceleration bonus. (Acceleration 100% / Deceleration 50% -> 0% / 0%)
+	Improves turn rate by 100%. (Turn Acceleration 100% / Max Turn Rate 50% -> 200% / 100%)
+
+- Unstable Injector
+
+	The previous implementation made the hull generally slower than before.
+	Now affects zero flux boost as well.
+	Decreased malfunction chance to 0.5%
+	Since engine malfunctions reduce top speed and manoeuvrability, these changes should make the hullmod a net positive for straight lines, and negative for anything else.
+	Reduced cost to 4/8/12/20
+	
+- ECM Package
+
+	Reduced cost to 4/8/12/20
+	Reduced effect of system cooldown bonus.
+
+- Nav Relay
+
+	Reduced cost to 4/8/12/20
+
+ETC.
+
+- Terminator Drones
+
+	Can now be installed on automated hulls.
+	Reduced OP to 8.
+
+- Updated 11 variants to utilize these changes.
+	
 
 [Changes - v0.6] [SUPER ALABASTER REDACTED] edition™
 

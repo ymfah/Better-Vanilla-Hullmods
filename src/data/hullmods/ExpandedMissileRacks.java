@@ -12,7 +12,7 @@ public class ExpandedMissileRacks extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getMissileAmmoBonus().modifyPercent(id, AMMO_BONUS);
 		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats);
 		if (sMod) {
 			stats.getMissileRoFMult().modifyMult(id, SMOD_ROF_MULT);
 		}

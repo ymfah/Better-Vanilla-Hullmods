@@ -29,7 +29,7 @@ public class FluxDistributor extends BaseHullMod {
 	}
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		float dissipation = (Float) mag.get(hullSize);
 		if (sMod) dissipation += (Float) magBonus.get(hullSize);
 		stats.getFluxDissipation().modifyFlat(id, dissipation);

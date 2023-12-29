@@ -30,8 +30,8 @@ public class RuggedConstructionAlt extends BaseHullMod {
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		//stats.getDynamic().getMod(Stats.DMOD_AVOID_PROB_MOD).modifyFlat(id, DMOD_AVOID_CHANCE * 0.01f);
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (!sMod) stats.getDynamic().getStat(Stats.DMOD_EFFECT_MULT).modifyMult(id, DMOD_EFFECT_MULT);
 		
 		DMOD_NUM = DModManager.getNumNonBuiltInDMods(stats.getVariant());

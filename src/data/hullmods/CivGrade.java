@@ -13,7 +13,7 @@ public class CivGrade extends BaseHullMod {
 	private static final int PD_OP = 5;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (!sMod) stats.getSensorProfile().modifyPercent(id, PROFILE_INCREASE);
 		if (!sMod) stats.getSensorStrength().modifyMult(id, 1f - STRENGTH_DECREASE * 0.01f);
 		

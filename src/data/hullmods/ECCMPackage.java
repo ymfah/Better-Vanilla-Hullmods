@@ -37,7 +37,7 @@ public class ECCMPackage extends BaseHullMod {
 	public static float SMOD_EW = 0f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getEccmChance().modifyFlat(id, sMod ? SMOD_ECCM_CHANCE : ECCM_CHANCE);
 		stats.getMissileGuidance().modifyFlat(id, GUIDANCE_IMPROVEMENT);
 		

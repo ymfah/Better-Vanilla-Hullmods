@@ -28,7 +28,7 @@ public class ShieldShuntAlt extends BaseHullMod {
 	private ShipHullSpecAPI hullSpec;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		//stats.getVentRateMult().modifyPercent(id, VENT_RATE_BONUS);
 		stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS + (sMod ? SMOD_ARMOR_BONUS : 0));

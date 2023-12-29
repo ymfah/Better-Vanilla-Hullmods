@@ -38,7 +38,7 @@ public class IntegratedPointDefenseAI extends BaseHullMod {
 	}
 
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-		boolean sMod = isSMod(ship) || ship.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(ship) || ship.getVariant().getHullMods().contains("integrationsuite") || ship.getVariant().getHullMods().contains("ill_advised");
 		
 		List weapons = ship.getAllWeapons();
 		Iterator iter = weapons.iterator();

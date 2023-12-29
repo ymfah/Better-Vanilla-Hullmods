@@ -13,7 +13,7 @@ public class AcceleratedShieldEmitter extends BaseHullMod {
 	public static float SMOD_BONUS = 100f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		stats.getShieldTurnRateMult().modifyPercent(id, SHIELD_BONUS_TURN + (sMod ? SMOD_BONUS : 0));
 		stats.getShieldUnfoldRateMult().modifyPercent(id, SHIELD_BONUS_UNFOLD + (sMod ? SMOD_BONUS : 0));
 	}

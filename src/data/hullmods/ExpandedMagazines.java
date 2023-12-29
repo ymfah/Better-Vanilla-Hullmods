@@ -17,8 +17,8 @@ public class ExpandedMagazines extends BaseHullMod {
 		stats.getEnergyAmmoBonus().modifyPercent(id, AMMO_BONUS);
 //		stats.getBallisticAmmoBonus().modifyPercent(id, AMMO_BONUS + (sMod ? SMOD_AMMO_BONUS : 0));
 //		stats.getEnergyAmmoBonus().modifyPercent(id, AMMO_BONUS + (sMod ? SMOD_AMMO_BONUS : 0));
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			stats.getBallisticAmmoRegenMult().modifyPercent(id, SMOD_REGEN_BONUS);
 			stats.getEnergyAmmoRegenMult().modifyPercent(id, SMOD_REGEN_BONUS);

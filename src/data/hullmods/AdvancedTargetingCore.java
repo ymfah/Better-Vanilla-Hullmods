@@ -61,7 +61,7 @@ public class AdvancedTargetingCore extends BaseHullMod {
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		
 		if(stats.getVariant().getHullSpec().getHullId().startsWith("paragon")) { //gotta do startsWith to make it apply to dmod variants
 		
@@ -88,15 +88,18 @@ public class AdvancedTargetingCore extends BaseHullMod {
 			}
 		}
 	}
-	
+	@Override
 	public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec, boolean isForBuildInList) {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
-		String hullId = ship.getVariant().getHullSpec().getHullId();
+
 		
 		tooltip.addPara("Certain protocols are disabled in favor of mobility, similar to safety overrides. However, this reduces the range bonus of ballistic and energy weapons to %s. The range of point-defense weapons is unaffected.", opad, bad, new String[]{"" + (int)Math.round(SMOD_RANGE_BONUS) + "%"});
-		
+
+		if (isForModSpec || ship == null || ship.getMutableStats() == null) return; //prevents crash from viewing it as modspec/progressive smod
+
+		String hullId = ship.getVariant().getHullSpec().getHullId();
 		String systemName = "";
 		
 		if(hullId.startsWith("paragon")){

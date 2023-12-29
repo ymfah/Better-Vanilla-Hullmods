@@ -25,8 +25,8 @@ public class ArmoredWeapons extends BaseHullMod {
 		// slower recoil recovery, also, to match the reduced recoil-per-shot
 		// overall effect is same as without skill but halved in every respect
 		stats.getRecoilDecayMult().modifyMult(id, 1f - (0.01f * RECOIL_BONUS));
-		
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite");
+
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
 		if (sMod) {
 			stats.getBallisticRoFMult().modifyMult(id, 1f + SMOD_BONUS * 0.01f);
 			stats.getEnergyRoFMult().modifyMult(id, 1f + SMOD_BONUS * 0.01f);
