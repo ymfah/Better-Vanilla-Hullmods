@@ -50,11 +50,15 @@ public class PhaseFieldAlt extends BaseHullMod implements HullModFleetEffect {
 		
 		
 		//ymfah - if shield shunt is detected than change system if not change to phase
-		
+
 		if (stats.getVariant().hasHullMod(HullMods.SHIELD_SHUNT)) {
-			stats.getVariant().getHullSpec().setShipDefenseId("damper");
+			if(stats.getVariant().getHullSpec().getShipDefenseId().equals("phasecloak")){
+				stats.getVariant().getHullSpec().setShipDefenseId("damper");
+			}
 		} else {
-			stats.getVariant().getHullSpec().setShipDefenseId("phasecloak");
+			if(stats.getVariant().getHullSpec().getShipDefenseId().equals("damper")){
+				stats.getVariant().getHullSpec().setShipDefenseId("phasecloak");
+			}
 		}
 	}
 	

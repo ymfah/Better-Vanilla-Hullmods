@@ -1,4 +1,4 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.7 - Last changed in 2023.12.30
+[0.96a-RC10] Better Vanilla Hullmods v0.7.1 - Last changed in 2023.12.30
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
 
@@ -11,6 +11,8 @@ Bug Fixes
 - Fixed CTD when used with progressive S-mods.
 
 - Fixed Drive Field Stabilizer S-mod not working.
+
+- 0.7.1 - Fixed issue where modded ship with phase field defaulting to vanilla phase cloak.
 
 Modified hullmods.
 
