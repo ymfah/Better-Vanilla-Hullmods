@@ -14,6 +14,8 @@ Bug Fixes
 
 - 0.7.1 - Fixed issue where modded ship with phase field defaulting to vanilla phase cloak.
 
+- 0.7.2 - Fixed issue where the The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada's mod gave 700% CR instead of 7.
+
 Modified hullmods.
 
 - Heavy Ballistics Integration
