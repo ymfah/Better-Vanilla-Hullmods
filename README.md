@@ -441,30 +441,9 @@ Indirectly nerfed EP/AP by making Civilian grade hull no longer drop.
 
 [Compatability]
 
-	Can be safely added and removed from existing games.
+	Can be safely added but not removed from existing games.
 	May have issues with mods that interact or change these hullmods.
 
-[ToDo]
-
-- More S-mod interactions
-
-	Add more S-mod bonuses to built-in only hullmods to drastically change the ship's role.
-	Make D-mods S-moddable. Reduce penalty by half, does not count towards the S-mod limit and still counts towards Derelict Operations.
-	Change Phase Anchor to have an interesting S-mod penalty.
-
-- More balance
-
-	Make makeshift shield generator apply to phase ships.
-	Make shield shunt remove phase. (if you know how to do these, please contact me)
-
-- More story?
-	
-	Figure out rules.csv and make certain hullmods only obtained by commission/raid.
-
-- Mod interactions
-
-	Lunalib integration to make changes to stats.
-	Experimental Hull modification integration to act as a vanila-friendly frontend.
 
 [Credit]
 
