@@ -1,0 +1,31 @@
+{
+	"baseHullId":"onslaught",
+	"skinHullId":"onslaught_hbismod",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"tags":[],
+	"builtInWeapons":{
+    },
+    	"weaponSlotChanges":{
+		"WS 016":{
+            "arc": 8,
+		},
+		"WS 017":{
+            "arc": 8,
+		},
+		"WS 018":{
+            "arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 019":{
+            "arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 020":{
+            "arc": 225,
+			"type": "HYBRID"
+		},
+	},    
+}

@@ -1,13 +1,14 @@
 {
     "displayName": "Hangerless",
-    "fluxCapacitors": 43,
+    "fluxCapacitors": 33,
     "fluxVents": 50,
     "goalVariant": true,
     "hullId": "legion_xiv",
     "hullMods": [
         "converted_fighterbay",
         "missleracks",
-        "targetingunit"
+        "targetingunit",
+        "integrationsuite"
     ],
     "permaMods": [],
     "sMods": [],

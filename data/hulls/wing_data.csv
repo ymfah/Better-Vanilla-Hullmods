@@ -1,6 +1,6 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
 borer_wing,drone_borer,"interceptor1, interceptor, drone, low, base_bp, auto_fighter, ind",0,,4,0,BOX,2000,500,,6,INTERCEPTOR,Drone,5,1500,,,,,,,,,,,,,18
-terminator_wing,drone_terminator,"support3, fighter, high, rare_bp, hist1t, merc, ind",3,,6,10,BOX,0,200,,2,SUPPORT,Point Defense,20,6000,,,,,,,,,,,,,19
+terminator_wing,drone_terminator,"support3, fighter, drone, high, rare_bp, hist1t, merc, auto_fighter, ind",3,,6,8,BOX,0,200,,2,SUPPORT,Point Defense,20,6000,,,,,,,,,,,,,19
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,20
 aspect_shock_wing,aspect_Shock,"auto_fighter, no_sell, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",3,,6,30,BOX,100000,600,100,6,INTERCEPTOR,Transience,20,20000,,,,,,,,,,,,,26
 aspect_shieldbreaker_wing,aspect_Shieldbreaker,"auto_fighter, no_sell, rapid_reform, leader_no_swarm, wingmen_no_swarm, match_leader_facing, attack_at_an_angle, independent_of_carrier, restricted",3,,6,30,CLAW,100000,600,0,4,FIGHTER,Transience,20,20000,,,,,,,,,,,,,27

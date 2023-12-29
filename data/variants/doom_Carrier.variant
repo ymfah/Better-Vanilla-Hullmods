@@ -1,16 +1,34 @@
 {
     "displayName": "Converted",
-    "fluxCapacitors": 15,
+    "fluxCapacitors": 0,
     "fluxVents": 0,
     "hullId": "doom",
     "hullMods": [
         "converted_hangar",
-        "missleracks"
+        "integrationsuite",
+        "stealth_minefield_Doom",
+        "fluxcoil"
     ],
-    "permaMods": [],
+    "permaMods": ["stealth_minefield_Doom"],
     "sMods": [],
     "variantId": "doom_Carrier",
     "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 011": "amblaster",
+                "WS 012": "amblaster"
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS 001": "phasecl",
+                "WS 002": "phasecl"
+            }
+        },
         {
             "autofire": false,
             "mode": "LINKED",
@@ -28,24 +46,6 @@
                 "WS 007": "ionpulser",
                 "WS 008": "ionpulser"
             }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 011": "amblaster",
-                "WS 012": "amblaster"
-            }
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 001": "phasecl"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "phasecl"}
         }
     ],
     "wings": ["xyphos_wing"]

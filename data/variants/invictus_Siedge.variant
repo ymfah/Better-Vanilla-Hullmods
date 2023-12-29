@@ -1,9 +1,9 @@
 {
     "displayName": "Siedge",
     "fluxCapacitors": 0,
-    "fluxVents": 46,
+    "fluxVents": 32,
     "goalVariant": true,
-    "hullId": "invictus",
+    "hullId": "invictus_hbismod",
     "hullMods": [
         "integrationsuite",
         "dedicated_targeting_core",
@@ -26,38 +26,22 @@
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 026": "flak"}
+            "weapons": {"WS 009": "autopulse"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 009": "mark9"}
+            "weapons": {"WS 010": "autopulse"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 010": "hellbore"}
+            "weapons": {"WS 001": "autopulse"}
         },
         {
             "autofire": false,
             "mode": "LINKED",
-            "weapons": {"WS 001": "hellbore"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {"WS 002": "mark9"}
-        },
-        {
-            "autofire": false,
-            "mode": "LINKED",
-            "weapons": {
-                "WS 000": "flak",
-                "WS 003": "flak",
-                "WS 005": "flak",
-                "WS 006": "flak",
-                "WS 008": "flak"
-            }
+            "weapons": {"WS 002": "autopulse"}
         }
     ]
 }

@@ -1,0 +1,4 @@
+id,type,text1,text2,text3,text4,notes
+emp_oc,SHIP_SYSTEM,"Activates an EMP generator. Nearby missiles, fighters, weapon emplacements and engines of enemy ships are all targeted and can be disabled in short order.
+
+Unfortunately, on-board weapon systems must be shut down to provide power for this device. The EMP pulses are also not very effective against enemy shields.",Special,"Generates lightning arcs that quickly knock out enemy missiles, weapons, and engines within range. Mostly negated by shields.",,

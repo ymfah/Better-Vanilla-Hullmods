@@ -1,0 +1,29 @@
+{
+	"baseHullId":"conquest",
+	"skinHullId":"conquest_hbismod",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"tags":[],
+	"builtInWeapons":{
+    },
+    	"weaponSlotChanges":{
+		"WS 011":{
+            "arc": 180,
+            "type": "HYBRID"
+        },
+		"WS 012":{
+			"arc": 180,
+			"type": "HYBRID"
+		},
+		"WS 013":{
+			"arc": 180,
+			"type": "HYBRID"
+		},
+		"WS 014":{
+			"arc": 180,
+			"type": "HYBRID"
+		},
+	},    
+}

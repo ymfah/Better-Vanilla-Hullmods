@@ -1,0 +1,54 @@
+{
+	"baseHullId":"invictus",
+	"skinHullId":"invictus_hbismod",
+	"removeWeaponSlots":[], 		# ids
+	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
+	"removeBuiltInMods":[], 		# hullmod ids
+	"removeBuiltInWeapons":[], 		# weapon slot ids
+	"tags":[],
+	"builtInWeapons":{
+    },
+    	"weaponSlotChanges":{
+		"WS 000":{
+			"arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 001":{
+			"arc": 8,
+			"type": "HYBRID"
+		},
+		"WS 002":{
+			"arc": 8,
+			"type": "HYBRID"
+		},
+		"WS 003":{
+			"arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 005":{
+			"arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 006":{
+			"arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 008":{
+			"arc": 225,
+			"type": "HYBRID"
+		},
+		"WS 009":{
+			"arc": 8,
+			"type": "HYBRID"
+		},
+		"WS 010":{
+			"arc": 8,
+			"type": "HYBRID"
+		},
+		"WS 026":{
+			"arc": 300,
+			"type": "HYBRID"
+		},
+		
+	},    
+}

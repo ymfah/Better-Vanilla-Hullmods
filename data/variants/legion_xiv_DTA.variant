@@ -1,13 +1,14 @@
 {
     "displayName": "DTA",
     "fluxCapacitors": 0,
-    "fluxVents": 43,
+    "fluxVents": 33,
     "goalVariant": true,
     "hullId": "legion_xiv",
     "hullMods": [
         "missleracks",
         "defensive_targeting_array",
-        "dedicated_targeting_core"
+        "dedicated_targeting_core",
+        "integrationsuite"
     ],
     "permaMods": [],
     "sMods": [],

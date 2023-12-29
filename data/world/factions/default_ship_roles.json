@@ -53,6 +53,8 @@
 		"venture_p_Hanger":4,
 		"venture_pather_Overdriven":4,
 		"dominator_XIV_Overdriven":4,
+		"eagle_xiv_Overdriven":4,
+		"falcon_xiv_Overdriven":4,
 		
 	},
 	"combatCapital":{
@@ -65,6 +67,7 @@
 		"atlas2_Hanger":4,
 		"atlas2_PD":4,
 		"conquest_Makeshift":4,
+		"conquest_Front":4,
 		"radiant_Overdriven":4,
 		"retribution_Overdriven":4,
 		"invictus_Siedge":4,
@@ -148,6 +151,8 @@
 		"gremlin_d_pirates_Hanger":4,
 		"gremlin_luddic_path_Hanger":4,
 		"shade_d_pirates_Hanger":4,
+		"shade_Overclocked":4,
+		"shade_d_pirates_Overclocked":4,
 		
 	},
 	"phaseMedium":{
