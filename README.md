@@ -16,6 +16,8 @@ Bug Fixes
 
 - 0.7.2 - Fixed issue where the The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada's mod gave 700% CR instead of 7.
 
+- 0.7.3 - Fixed ATC bug. Temporarily removed interaction with HBI and ill advised due to CTD. Can still be built in.
+
 Modified hullmods.
 
 - Heavy Ballistics Integration

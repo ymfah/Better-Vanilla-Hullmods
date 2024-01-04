@@ -27,11 +27,8 @@ public class HeavyBallisticsIntegrationAlt extends BaseHullMod {
 	public static final float SMOD_ARC_BONUS  = 50f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite") || stats.getVariant().getHullMods().contains("ill_advised");
+		boolean sMod = isSMod(stats) || stats.getVariant().getHullMods().contains("integrationsuite"); // || stats.getVariant().getHullMods().contains("ill_advised")
 		if (!sMod) {
-			
-			stats.getDynamic().getMod(Stats.LARGE_BALLISTIC_MOD).modifyFlat(id, -COST_REDUCTION);
-			
 			if (stats.getVariant().getHullSpec().getHullId().contains("_hbismod")) {
 				//ShipHullSpecAPI hullSpec = Global.getSettings().getHullSpec(stats.getVariant().getHullSpec().getBaseHullId() + "_alt");
 				ShipHullSpecAPI hullSpec;
@@ -68,9 +65,9 @@ public class HeavyBallisticsIntegrationAlt extends BaseHullMod {
 					removeHBIRefund(stats,0);
 				}
             }
-			
-			
-			
+
+
+			stats.getDynamic().getMod(Stats.LARGE_BALLISTIC_MOD).modifyFlat(id, -COST_REDUCTION);
 			
 		}
 		if (sMod) {
@@ -179,17 +176,11 @@ public class HeavyBallisticsIntegrationAlt extends BaseHullMod {
 		} else {
 			tooltip.addPara("For the %s, refund 10 OP per lage ballistic slot.", opad, h, ShipName);
 		}
-		
-		
-
-
-		
-
-		
 	}
 
 	@Override
 	public boolean affectsOPCosts() {
+
 		return true;
 	}
 

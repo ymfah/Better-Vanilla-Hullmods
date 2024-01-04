@@ -67,10 +67,17 @@ public class AdvancedTargetingCore extends BaseHullMod {
 		
 			if(!sMod) {
 				stats.getVariant().getHullSpec().setShipSystemId("fortressshield");
+				stats.getBallisticWeaponRangeBonus().modifyPercent(id, RANGE_BONUS);
+				stats.getEnergyWeaponRangeBonus().modifyPercent(id, RANGE_BONUS);
+
+				stats.getNonBeamPDWeaponRangeBonus().modifyPercent(id, -PD_MINUS);
+				stats.getBeamPDWeaponRangeBonus().modifyPercent(id, -PD_MINUS);
 			}
 				
 			if(sMod) {
 				stats.getVariant().getHullSpec().setShipSystemId("plasmajets"); //change to system for funi
+				stats.getBallisticWeaponRangeBonus().modifyPercent(id, SMOD_RANGE_BONUS);
+				stats.getEnergyWeaponRangeBonus().modifyPercent(id, SMOD_RANGE_BONUS);
 			}
 //			stats.getVariant().getHullSpec().setHullName(stats.getVariant().getHullSpec().getHullId()); //debug pls ignore
 		} else {
