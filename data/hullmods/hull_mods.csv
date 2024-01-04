@@ -116,7 +116,7 @@ Integration Suite,integrationsuite,,,,"no_drop, no_drop_salvage, standard","Spec
 
 This hull modification mimics that effect. Activates the positive S-mod effect of other hullmods.
 
-Does not affect logistics hullmods. Does not affect Logistics hullmods.",Activates S-mod effects of other hullmods.,,graphics/hullmods/damper_field.png
+Does not affect logistics hullmods.",Activates S-mod effects of other hullmods.,,graphics/hullmods/damper_field.png
 Makeshift Shield Generator,frontshield,0,,,"shields, defensive, standard",Shields,4000,,,,5,10,15,25,data.hullmods.FrontShieldGenerator,"Installs an inefficient shield generator that does not require external emitter nodes. The shield emitter is locked in a forward-facing position and has a %s degree arc.
 
 The shield generator draws much of its power from engines and reduces the ship's top speed by %s.
@@ -179,3 +179,4 @@ Unstable Injector,unstable_injector,0,,,"engines, merc, standard",Engines,2500,T
 Has a small chance to cause engine malfunctions, around %s every second.","Increases speed, reduces combat readiness.","Increases the ship's top speed and zero-flux bonus by by a factor of %s.
 
 Ship can no longer decelerate.",graphics/hullmods/unstable_injector.png
+High Maintenance,high_maintenance,3,,,special,Special,10000,,,,3,5,8,12,data.hullmods.HighMaintenance,Increases the monthly maintenance supply cost by %s.,Increases maintenance cost.,Increases the monthly maintenance supply cost.,graphics/hullmods/high_maintenance.png
