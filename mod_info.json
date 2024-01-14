@@ -3,7 +3,7 @@
 	"name":"Better Vanilla Hullmods", # Displayed to the player
 	"author":"ymfah",
     "utility":"false",
-	"version":"0.7.3",
+	"version":"0.7.4",
 	"description":"Remove vanilla hullmod restrictions, add hidden hullmods, and imporve bad ones.",
     "gameVersion": "0.96a-RC10", 
   	"jars":["jars/BVH.jar"],

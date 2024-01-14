@@ -71,6 +71,9 @@ public class SafetyOverrides extends BaseHullMod {
 //		stats.getMaxRecoilMult().modifyMult(id, 1.5f);
 //		stats.getRecoilPerShotMult().modifyMult(id, RECOIL_MULT);
 
+
+
+
 		//ILL ADVISED MODIFICATION
 		boolean sMod = isSMod(stats);
 		if (sMod) {
@@ -85,7 +88,7 @@ public class SafetyOverrides extends BaseHullMod {
 		boolean sMod = isSMod(ship);
 		if(sMod)ship.addListener(new IllAdvised.CritMalfunctionListener(ship));
 	}
-	
+
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + ((Float) speed.get(HullSize.FRIGATE)).intValue();
 		if (index == 1) return "" + ((Float) speed.get(HullSize.DESTROYER)).intValue();

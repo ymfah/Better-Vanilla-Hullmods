@@ -1,4 +1,4 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.7.1 - Last changed in 2023.12.30
+[0.96a-RC10] Better Vanilla Hullmods v0.7.3 - Last changed in 2024.01.04
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
 
@@ -17,6 +17,8 @@ Bug Fixes
 - 0.7.2 - Fixed issue where the The Magnanimous, Excellent, Glorious and Auspicious Supreme Chief Overlord President Executive Gas Station Manager Phillip Andrada's mod gave 700% CR instead of 7.
 
 - 0.7.3 - Fixed ATC bug. Temporarily removed interaction with HBI and ill advised due to CTD. Can still be built in.
+
+- 0.7.4 - Fixed CTD and multiple ship not working issue with S-modded doom.
 
 Modified hullmods.
 

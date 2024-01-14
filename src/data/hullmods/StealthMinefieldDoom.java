@@ -20,7 +20,6 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class StealthMinefieldDoom extends BaseHullMod {
 
-	public static String MINEFIELD_DATA_KEY = "minefield_data_key";
 	public static final float DOOM_MINE_RANGE  = 1500f;
 	public static class IncomingMine {
 		Vector2f mineLoc;
@@ -41,12 +40,15 @@ public class StealthMinefieldDoom extends BaseHullMod {
 		//if (true) return;
 		
 		CombatEngineAPI engine = Global.getCombatEngine();
+
+
+		String MINEFIELD_YMFAH_DATA_KEY = ship.getId() + "minefield_ymfah_data_key";
 		
-		MinefieldData data = (MinefieldData) engine.getCustomData().get(MINEFIELD_DATA_KEY);
+		MinefieldData data = (MinefieldData) engine.getCustomData().get(MINEFIELD_YMFAH_DATA_KEY);
 		if (data == null) {
 			data = new MinefieldData();
 			data.source = ship;
-			engine.getCustomData().put(MINEFIELD_DATA_KEY, data);
+			engine.getCustomData().put(MINEFIELD_YMFAH_DATA_KEY, data);
 		}
 		
 		if (data.source != ship) return;
