@@ -163,96 +163,7 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		//if (ship != null && ship.getNumFighterBays() > 0) return "Ship has fighter bays";
 		return "Ship's combat readiness lost per deployment is too high";
 	}
-	
-	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
-		//setFighterSkin(fighter, ship);
-//		boolean statsPenalty = ship.getMutableStats().getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_PERFORMANCE_PENALTY).computeEffective(0f) <= 0;
-//		boolean sMod = isSMod(ship);
-//		if (statsPenalty && !sMod) {
-//			new DefectiveManufactory().applyEffectsToFighterSpawnedByShip(fighter, ship, id);
-//		}
-	}
-	
-	
-	public static void setFighterSkin(ShipAPI fighter, ShipAPI carrier) {
-		SpriteAPI sprite = getFighterSkin(fighter, carrier);
-		if (sprite != null) {
-			fighter.setSprite(sprite);
-		}
-	}
-	
-	public static SpriteAPI getFighterSkin(ShipAPI fighter, ShipAPI carrier) {
-		if (carrier.getHullStyleId().equals(fighter.getHullStyleId())) {
-			return null;
-		}
-		String cat = null;
-		SpriteAPI skin = null;
-		if (carrier.getOwner() == 0 || carrier.getOriginalOwner() == 0) {
-			cat = "fighterSkinsPlayerOnly";
-			skin = getFighterSkin(cat, fighter, carrier);
-		}
-		if (skin != null) return skin;
-		
-		cat = "fighterSkinsPlayerAndNPC";
-		skin = getFighterSkin(cat, fighter, carrier);
-		return skin;
-	}
-	
-	
-	public static SpriteAPI getFighterSkin(String cat, ShipAPI fighter, ShipAPI carrier) {
-		
-		String exclude = "fighterSkinsExcludeFromSharing";
-		String id = fighter.getHullSpec().getHullId();
-		String style = carrier.getHullStyleId();
-		
-		List<String> skins = Global.getSettings().getSpriteKeys(cat);
-		Set<String> noSharing = new LinkedHashSet<String>(Global.getSettings().getSpriteKeys(exclude));
-		
-		List<SpriteAPI> matching = new ArrayList<SpriteAPI>();
-		for (String key : skins) {
-			if (key.equals(id + "_" + style)) {
-				return Global.getSettings().getSprite(cat, key);
-			}
-			if (key.startsWith(id) && !noSharing.contains(key)) {
-				matching.add(Global.getSettings().getSprite(cat, key));
-			}
-		}
-		
-		if (!matching.isEmpty()) {
-			SpriteAPI best = null;
-			float minDist = Float.MAX_VALUE;
-			
-			for (SpriteAPI curr : matching) {
-				float dist = Misc.getColorDist(carrier.getSpriteAPI().getAverageBrightColor(), curr.getAverageBrightColor());
-				if (dist < minDist) {
-					best = curr;
-					minDist = dist;
-				}
-			}
-			return best;
-		}
-		return null;
-	}
-	
-	
-//	public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
-//		if (index == 2) return "" + CREW_REQ;
-//		if (index == 3) return "" + BOMBER_COST_PERCENT + "%";
-//		if (index == 4) return "" + ALL_FIGHTER_COST_PERCENT + "%";
-//		return new DefectiveManufactory().getDescriptionParam(index, hullSize, ship);
-////		if (index == 0) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue() + "%";
-////		if (index == 1) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue() + "%";
-////		if (index == 2) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue() + "%";
-////		if (index == 3) return "" + CREW_REQ;
-////		return null;
-//		//if (index == 0) return "" + ((Float) mag.get(hullSize)).intValue();
-//		//return null;
-//	}
-	
-//	@Override
-//	public boolean affectsOPCosts() {
-//		return true;
-//	}
+
 	
 	@Override
 	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
@@ -278,14 +189,6 @@ public class ConvertedHangarAlt extends BaseHullMod {
 		bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
 
 
-//		tooltip.addPara("Increases fighter refit time by %s, "
-//				+ "and the fighter replacement rate both decays and recovers %s more slowly. "
-//				+ "In addition, bombers returning to rearm take %s seconds longer to relaunch. "
-//				+ "Increases the minimum crew by %s to account for pilots and flight crews.", opad, h,
-//				"" + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,
-//				"" + Misc.getRoundedValueMaxOneAfterDecimal(REPLACEMENT_TIME_MULT) + Strings.X,
-//				"" + (int) EXTRA_REARM_TIME,
-//				"" + (int) CREW_REQ);
 		tooltip.addPara("Increases fighter refit time by %s, "
 				+ "and the fighter replacement rate both decays and recovers %s more slowly. "
 				+ "In addition, bombers returning to rearm (or fighters returning for repairs) "

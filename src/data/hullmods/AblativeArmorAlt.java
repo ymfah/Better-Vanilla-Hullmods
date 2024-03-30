@@ -5,6 +5,8 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.Global;
+
 
 import java.awt.*;
 
@@ -30,6 +32,7 @@ public class AblativeArmorAlt extends BaseHullMod {
 				float hullBonus = stats.getVariant().getHullSpec().getArmorRating()*0.9f;
 				stats.getArmorBonus().modifyPercent(id, -90f);
 				stats.getHullBonus().modifyFlat(id,hullBonus);
+
 			}
 		}
 	}

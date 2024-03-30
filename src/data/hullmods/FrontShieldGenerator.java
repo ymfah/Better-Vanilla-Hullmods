@@ -1,82 +1,96 @@
 package data.hullmods;
 
-import com.fs.starfarer.api.combat.BaseHullMod;
-import com.fs.starfarer.api.combat.MutableShipStatsAPI;
-import com.fs.starfarer.api.combat.ShieldAPI;
-import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
-import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
+import com.fs.starfarer.api.util.IntervalUtil;
+
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FrontShieldGenerator extends BaseHullMod {
-	
-	public static float EFFICIENCY = 1.2f;
-	public static float SHIELD_ARC = 90f;
-	public static float OMNI_SHIELD_ARC = 60f;
-	public static float SPEED_MULT = 0.85f;
-	public static float ARMOR_BONUS = 15f;
-	
-//	private static Map mag = new HashMap();
-//	static {
-//		mag.put(HullSize.FRIGATE, 40f);
-//		mag.put(HullSize.DESTROYER, 30f);
-//		mag.put(HullSize.CRUISER, 25f);
-//		mag.put(HullSize.CAPITAL_SHIP, 15f);
-//	}
-	
-	//public void applyEffectsAfterShipCreationFirstPass(ShipAPI ship, String id) {
-	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-		if (ship.getHullSpec().getDefenseType() == ShieldType.NONE) {
-			ship.setShield(ShieldType.FRONT, 0.5f, EFFICIENCY, SHIELD_ARC);
-		} 
-		if (ship.getHullSpec().getDefenseType() == ShieldType.FRONT) {
-			ship.setShield(ShieldType.FRONT, 0.5f, EFFICIENCY, SHIELD_ARC);
-		} 
-		if (ship.getHullSpec().getDefenseType() == ShieldType.OMNI) {
-			ship.setShield(ShieldType.OMNI, 0.5f, EFFICIENCY, OMNI_SHIELD_ARC);
-		} 
-	}
+
+	public static float FLUXRESERVE = 0.25f;
+	public static float SHIELD_ARC = 120f;
+
+	public static float ARC_DEBUFF = 0.75f;
+
+	public static float SHIELD_EFF = 1.2f;
+	public static float EFF_BUFF = 0.5f;
+	public boolean fired = false;
+
+	public ShipAPI drone;
+
+
+
+	public Color shieldColor;
+
+
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		//stats.getMaxSpeed().modifyFlat(id, (Float) mag.get(hullSize) * -1f);
 		
-		if (stats.getVariant().getHullSpec().getDefenseType() == ShieldType.OMNI || stats.getVariant().getHullSpec().getDefenseType() == ShieldType.FRONT) {
-			stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS);
-		} else {
-			stats.getMaxSpeed().modifyMult(id, SPEED_MULT);
+		stats.getFluxCapacity().modifyFlat("shielddrone",-stats.getFluxCapacity().getBaseValue()*FLUXRESERVE);
+		stats.getFluxDissipation().modifyFlat("shielddrone",-stats.getFluxDissipation().getBaseValue()*FLUXRESERVE);
+		
+	}
+
+	public void advanceInCombat(ShipAPI ship, float amount) {
+		CombatEngineAPI engine = Global.getCombatEngine();
+		if (engine == null) return;
+		if (engine.isPaused()) return;
+		String ShieldDroneDataKey = ship.getId() + "shielddrone_ymfah_data_key";
+
+		ShipAPI drone = (ShipAPI) engine.getCustomData().get(ShieldDroneDataKey); //TODO: change to ship.setcustomdata
+
+		//Create shield drone
+		if(drone == null){
+			engine.getFleetManager(ship.getOwner()).setSuppressDeploymentMessages(true);
+			drone = engine.getFleetManager(ship.getOwner()).spawnShipOrWing("ymfah_shielddrone_base",ship.getLocation(), ship.getFacing());
+			engine.getFleetManager(ship.getOwner()).setSuppressDeploymentMessages(false);
+			engine.getCustomData().put(ShieldDroneDataKey, drone);
+			drone.setCollisionClass(CollisionClass.FIGHTER);
+			drone.getShield().setRadius(ship.getShieldRadiusEvenIfNoShield()+25f);
+			drone.setCollisionRadius(ship.getCollisionRadius()+25f);
+			drone.getMutableStats().getFluxCapacity().modifyFlat("shielddrone",ship.getMutableStats().getFluxCapacity().getBaseValue()*FLUXRESERVE*2);
+			drone.getMutableStats().getFluxDissipation().modifyFlat("shielddrone",ship.getMutableStats().getFluxDissipation().getBaseValue()*FLUXRESERVE*2);
+			shieldColor = drone.getShield().getInnerColor();
+			drone.getShield().setRingColor(shieldColor.brighter());
+			drone.getShield().setInnerColor(shieldColor.brighter());
+			fired = true;
 		}
-		
+
+		//Configure shield properties everyframe
+		drone.getShield().setArc(SHIELD_ARC*(1-(drone.getFluxLevel()*ARC_DEBUFF)));
+		drone.getMutableStats().getShieldDamageTakenMult().modifyMult("droneshield",1-(drone.getFluxLevel()*EFF_BUFF));
+		drone.getLocation().set(ship.getLocation().x, ship.getLocation().y);
+		drone.setFacing(ship.getFacing());
+		//exceptions
+		if (!ship.isAlive()) engine.removeEntity(drone);
+		if (drone.getShield().isOff()) drone.giveCommand(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK, null, 0);
+		if(ship.isPhased())drone.giveCommand(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK, null, 0);
+		if(ship.getFluxTracker().isVenting() && drone.getFluxTracker().getFluxLevel() > 0.5f)drone.giveCommand(ShipCommand.VENT_FLUX, null, 0);
 	}
 
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) {
-			return "" + (int) SHIELD_ARC;
+			return "" + (int) (FLUXRESERVE * 100) + "%";
 		}
 		if (index == 1) {
-			return "" + (int) Math.round((1f - SPEED_MULT) * 100f) + "%";
+			return "" + SHIELD_EFF;
 		}
 		if (index == 2) {
-			return "" + (int) ARMOR_BONUS + "%";
+			return "" + (int) SHIELD_ARC;
 		}
-		
-//		if (index == 1) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue();
-//		if (index == 2) return "" + ((Float) mag.get(HullSize.DESTROYER)).intValue();
-//		if (index == 3) return "" + ((Float) mag.get(HullSize.CRUISER)).intValue();
-//		if (index == 4) return "" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue();
-		
+		if (index == 3) {
+			return "" + (SHIELD_EFF * (1-EFF_BUFF));
+		}
+		if (index == 4) {
+			return "" + (int) (SHIELD_ARC * (1-ARC_DEBUFF));
+		}
 		return null;
-	}
-
-	public boolean isApplicableToShip(ShipAPI ship) {
-		if (ship != null && ship.getVariant().getHullMods().contains(HullMods.SHIELD_SHUNT)) {
-			return false;
-		}
-		return ship != null && ship.getHullSpec().getDefenseType() != ShieldType.PHASE;
-	}
-	
-	public String getUnapplicableReason(ShipAPI ship) {
-		return "Ship already has shields";
 	}
 }

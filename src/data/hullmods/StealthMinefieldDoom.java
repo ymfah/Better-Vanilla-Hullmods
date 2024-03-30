@@ -43,7 +43,7 @@ public class StealthMinefieldDoom extends BaseHullMod {
 
 
 		String MINEFIELD_YMFAH_DATA_KEY = ship.getId() + "minefield_ymfah_data_key";
-		
+
 		MinefieldData data = (MinefieldData) engine.getCustomData().get(MINEFIELD_YMFAH_DATA_KEY);
 		if (data == null) {
 			data = new MinefieldData();

@@ -170,40 +170,6 @@ public class PhaseFieldAlt extends BaseHullMod implements HullModFleetEffect {
 					Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));
 		}
 	}
-
-//	public static float getAdjustedPhaseFieldModifier(CampaignFleetAPI fleet, String skipId, float add) {
-//		float max = 0f;
-//		float total = 0f;
-//		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-//			if (member.isMothballed()) continue;
-//			if (member.getRepairTracker().getCR() < MIN_CR) continue;
-//			
-//			if (member.getId().equals(skipId)) { 
-//				continue;
-//			}
-//			float v = member.getStats().getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).computeEffective(0f);
-//			if (v <= 0) continue;
-//			
-//			if (v > max) max = v;
-//			total += v;
-//		}
-//		if (add > max) max = add;
-//		total += add;
-//		
-//		if (max <= 0) return 0f;
-//		float units = total / max;
-//		if (units <= 1) return max;
-//		float mult = Misc.logOfBase(2.5f, units) + 1f;
-//		float result = total * mult / units;
-//		if (result <= 0) {
-//			result = 0;
-//		} else {
-//			result = Math.round(result * 100f) / 100f;
-//			result = Math.max(result, 1f);
-//		}
-//		return result;
-//	}
-	
 	
 	public static float [] getPhaseFieldMultBaseProfileAndTotal(CampaignFleetAPI fleet, String skipId, float addProfile, float addSensor) {
 		List<FleetMemberAPI> members = new ArrayList<FleetMemberAPI>();

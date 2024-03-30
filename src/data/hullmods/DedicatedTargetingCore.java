@@ -38,6 +38,7 @@ public class DedicatedTargetingCore extends BaseHullMod {
 		if (sMod) map = IntegratedTargetingUnit.mag;
 		stats.getBallisticWeaponRangeBonus().modifyPercent(id, (Float) map.get(hullSize));
 		stats.getEnergyWeaponRangeBonus().modifyPercent(id, (Float) map.get(hullSize));
+
 	}
 
 	@Override

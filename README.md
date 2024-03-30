@@ -1,8 +1,56 @@
-[0.96a-RC10] Better Vanilla Hullmods v0.7.3 - Last changed in 2024.01.04
+[0.97a-RC11] Better Vanilla Hullmods v0.8 - Last changed in 2024.03.30
 
 Remove vanilla hullmod restrictions, restore hidden hullmods, and improve bad ones.
 
 Note: Certain built-in only hullmods may show up if you use console command allhullmods.
+
+[Changes - v0.8] Shielded Invictus edition™
+
+Modified Hullmods
+
+ - 0.97 changes applied
+
+	Replaced Aux Thrusters and Escort Package to 0.97 versions.
+	Reverted SO to Flux Shunt compatible version.
+	Applied ECCM bug fix.
+
+ - ECM Package
+
+	S-mod Bonus - Provides a range increase based on ECM difference.
+	This effect is uncapped. ECM maxxing is real.
+
+ - BDeck
+
+	S-mod Bonus - Increase fighter per bay by 1. Removes passive effect.
+	
+ - Distributed Fire Control
+
+	Can now be obtained.
+
+ - Extended Shield
+
+	S-mod Bonus - Provides a 360 degree shield to any ship. Upkeep is increased based on how much extra shielding is needed to achive 360 degrees.
+
+ - Neural Integrator & Neural Interface
+
+	Now provides fighters launched from this ship the skills from captains.
+	Same rules apply as neural switching. No ammo increase and whatnot.
+
+ - Makeshift Shield Generator.
+
+	Now reserves 25% of flux cap and dissipation.
+	Now compatible with shield shunt.
+	Adds a modular front shield with that stat. Does not contribute flux to the main ship.
+	Ships with existing shield will have double shield.
+	Can now be applied to phase ships.
+
+ - Phase Field
+
+	Can now be obtained.
+
+Bug Fixes
+
+ - Fixed shield shunt not applying to phase ships.
 
 [Changes - v0.7] Ill-Advised Modification 2: Electric Boogaloo edition™
 

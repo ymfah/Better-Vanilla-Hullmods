@@ -60,15 +60,11 @@ public class ShieldShuntAlt extends BaseHullMod {
 		if (ship.getVariant().getHullSpec().getShieldType() == ShieldType.NONE && 
 				!ship.getVariant().hasHullMod("frontshield")) return false;
 		if (ship.getVariant().hasHullMod(HullMods.SHIELD_SHUNT)) return true;
-		if (ship.getVariant().hasHullMod(HullMods.MAKESHIFT_GENERATOR)) return false;
 		if (ship.getVariant().hasHullMod(HullMods.PHASE_FIELD) && ship.getVariant().getHullSpec().getShipDefenseId() == "phasecloak") return true;
 		return ship != null && ship.getShield() != null;
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship.getVariant().hasHullMod(HullMods.MAKESHIFT_GENERATOR)) {
-			return "Incompatible with Makeshift Shield Generator";
-		}
 		return "Ship has no standard phase or shields";
 	}
 	
