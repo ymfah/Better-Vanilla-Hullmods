@@ -1,0 +1,14 @@
+{
+  "variantId": "ymfah_shielddrone_base",
+  "hullId": "ymfah_shielddrone",
+  "displayName": "Default",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

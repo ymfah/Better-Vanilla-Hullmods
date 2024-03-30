@@ -1,0 +1,30 @@
+{
+  "hullName": "Shielddrone",
+  "hullId": "ymfah_shielddrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/deployables/mini_navbeacon_base.png",
+  "style": "HIGH_TECH",
+  "height": 30,
+  "width": 31,
+  "center": [15, 15.5],
+  "collisionRadius": 0,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 0,
+  "viewOffset": 0,
+  "builtInMods": [
+    "vastbulk",
+	"fluxshunt"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    -8.5, -8,
+    3, -9,
+    10.5, -4.5,
+    5.5, -2.5,
+    5.5, 2.5,
+    10.5, 4.5,
+    3, 9,
+    -8.5, 8
+  ]
+}
